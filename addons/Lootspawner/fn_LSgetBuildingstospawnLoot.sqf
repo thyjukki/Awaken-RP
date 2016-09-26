@@ -55,7 +55,7 @@ _begintime = diag_tickTime;
 				for "_poscount" from 0 to (count (_buildPosViable_list select 0) - 1) do
 				{
 					//consider chance per Slot
-					if ((floor random 40) < _chpSpot) then {
+					if ((floor random 100) < _chpSpot) then {
 						_iPos = (_buildPosViable_list select 0) select _poscount;
 						_spwnPos = _x modelToWorld (_iPos select 1);
 						_spwnPos = [_spwnPos select 0, _spwnPos select 1, (_spwnPos select 2) + 0.1];

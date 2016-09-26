@@ -370,12 +370,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={-1044.571,180.10663,6913.646};
+				position[]={-1044.571,180.1071,6913.646};
 				angles[]={6.183527,0,0};
 			};
 			id=18581;
 			type="RyanZM_ModuleSettings";
-			atlOffset=-63.421478;
+			atlOffset=-63.421005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -526,7 +526,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=1;
+							value=2;
 						};
 					};
 				};
@@ -595,12 +595,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={-1100.7,180.10664,6913.646};
+				position[]={-1100.7,180.1062,6913.646};
 				angles[]={6.183527,0,0};
 			};
 			id=18582;
 			type="RyanZM_ModuleAbilities";
-			atlOffset=-65.85054;
+			atlOffset=-65.850983;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -839,12 +839,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={-1160.9851,190.06689,6808.6646};
-				angles[]={0.23239037,0,0};
+				position[]={-1160.985,190.06718,6808.665};
+				angles[]={0.23239058,0,0};
 			};
 			id=18583;
 			type="RyanZM_ModuleZombieHealth";
-			atlOffset=-39.879166;
+			atlOffset=-39.878998;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -893,12 +893,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={-1159.946,188.25365,6861.6758};
+				position[]={-1159.946,188.25388,6861.6758};
 				angles[]={0.32175145,0,0};
 			};
 			id=18584;
 			type="RyanZM_ModuleMovementSpeed";
-			atlOffset=-50.242233;
+			atlOffset=-50.242004;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1191,12 +1191,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={-1100.7,188.25365,6861.6758};
+				position[]={-1100.7,188.25391,6861.6758};
 				angles[]={0.32175145,0,0};
 			};
 			id=18586;
 			type="RyanZM_ModuleCustomDifficulty";
-			atlOffset=-52.77626;
+			atlOffset=-52.776001;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -1397,12 +1397,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={-1101.74,190.06667,6808.666};
+				position[]={-1101.74,190.06705,6808.666};
 				angles[]={0.23239058,0,0};
 			};
 			id=18587;
 			type="RyanZM_ModuleLootSettings";
-			atlOffset=-42.385376;
+			atlOffset=-42.384995;
 			class CustomAttributes
 			{
 				class Attribute0
