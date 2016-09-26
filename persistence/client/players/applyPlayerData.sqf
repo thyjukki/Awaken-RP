@@ -1,0 +1,99 @@
+// ******************************************************************************************
+// * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
+// ******************************************************************************************
+//	@file Name: applyPlayerData.sqf
+//	@file Author: AgentRev
+
+// This is where you load player status & inventory data which will be wiped upon death, for persistent variables use c_applyPlayerInfo.sqf instead
+
+private ["_data", "_removal", "_name", "_value"];
+
+_data = _this;
+_removal = param [1, true];
+
+if (_removal isEqualTo false) then
+{
+	_data = param [0, [], [[]]];
+}
+else
+{
+	removeAllWeapons player;
+	removeAllAssignedItems player;
+	removeUniform player;
+	removeVest player;
+	removeBackpack player;
+	removeGoggles player;
+	removeHeadgear player;
+};
+
+{
+	_x params ["_name", "_value"];
+
+	switch (_name) do
+	{
+		case "Damage": { player setDamage _value };
+		case "HitPoints":
+		{
+			player allowDamage true;
+			{ player setHitPointDamage _x } forEach _value;
+			player allowDamage !(player getVariable ["playerSpawning", true]);
+		};
+		case "Hunger": { hungerLevel = _value };
+		case "Thirst": { thirstLevel = _value };
+		/*case "Position":
+		{
+			if (count _value == 3) then
+			{
+				{ if (typeName _x == "STRING") then { _value set [_forEachIndex, parseNumber _x] } } forEach _value;
+				player setPosATL _value;
+			};
+		};
+		case "Direction": { player setDir _value };*/
+		case "Uniform": { if (_value != "") then { player forceAddUniform _value; }; };
+		case "Vest": { if (_value != "") then { player addVest _value } };
+		case "Backpack": { removeBackpack player; if (_value != "") then { player addBackpack _value; } };
+		case "Goggles": { if (_value != "") then { player addGoggles _value } };
+		case "Headgear": { if (_value != "") then { player addHeadgear _value; } };
+		case "LoadedMagazines":
+		{
+			player addBackpack "B_Carryall_Base"; // temporary backpack to hold mags
+			{ player addMagazine _x } forEach _value;
+		};
+		case "PrimaryWeapon": { player addWeapon _value; removeAllPrimaryWeaponItems player };
+		case "SecondaryWeapon": { player addWeapon _value };
+		case "HandgunWeapon": { player addWeapon _value; removeAllHandgunItems player };
+		case "PrimaryWeaponItems": { { if (_x != "") then { player addPrimaryWeaponItem _x } } forEach _value };
+		case "SecondaryWeaponItems": { { if (_x != "") then { player addSecondaryWeaponItem _x } } forEach _value };
+		case "HandgunItems": { { if (_x != "") then { player addHandgunItem _x } } forEach _value };
+		case "AssignedItems":
+		{
+			{
+				if ([player, _x] call isAssignableBinocular) then
+				{
+					if (_x select [0,15] == "Laserdesignator" && {{_x == "Laserbatteries"} count magazines player == 0}) then
+					{
+						[player, "Laserbatteries"] call fn_forceAddItem;
+					};
+
+					player addWeapon _x;
+				}
+				else
+				{
+					player linkItem _x;
+				};
+			} forEach _value;
+		};
+		case "CurrentWeapon": { player selectWeapon _value };
+		case "Stance": { [player, [player, _value] call getFullMove] call switchMoveGlobal; uiSleep 1 }; // 1 sec sleep to ensure full stance transition before moving player to fimal location
+		case "UniformWeapons": { { (uniformContainer player) addWeaponCargoGlobal _x } forEach _value };
+		case "UniformItems": { { (uniformContainer player) addItemCargoGlobal _x } forEach _value };
+		case "UniformMagazines": { [uniformContainer player, _value] call processMagazineCargo };
+		case "VestWeapons": { { (vestContainer player) addWeaponCargoGlobal _x } forEach _value };
+		case "VestItems": { { (vestContainer player) addItemCargoGlobal _x } forEach _value };
+		case "VestMagazines": { [vestContainer player, _value] call processMagazineCargo };
+		case "BackpackWeapons": { { (backpackContainer player) addWeaponCargoGlobal _x } forEach _value };
+		case "BackpackItems": { { (backpackContainer player) addItemCargoGlobal _x } forEach _value };
+		case "BackpackMagazines": { [backpackContainer player, _value] call processMagazineCargo };
+		case "PartialMagazines": { { player addMagazine _x } forEach _value };
+	};
+} forEach _data;
