@@ -8,18 +8,18 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=408;
+		nextID=471;
 	};
 	class LayerIndexProvider
 	{
-		nextID=8;
+		nextID=12;
 	};
 	class Camera
 	{
-		pos[]={4400.3589,59.333294,2505.8777};
-		dir[]={-0.84667921,-0.42873567,0.31518465};
-		up[]={-0.40180033,0.90342838,0.14957407};
-		aside[]={0.34887344,-6.351911e-008,0.9371804};
+		pos[]={9601.2861,229.07707,6575.0581};
+		dir[]={0.92958945,-0.33247387,-0.15918458};
+		up[]={0.32770881,0.94310874,-0.056117468};
+		aside[]={-0.16878651,-1.0820804e-007,-0.98565716};
 	};
 };
 binarizationWanted=0;
@@ -46,13 +46,14 @@ addons[]=
 	"A3_Structures_F_Mil_TentHangar",
 	"A3_Props_F_Exp_Military_Camps",
 	"A3_Structures_F_Mil_Helipads",
-	"A3_Structures_F_EPB_Civ_Graffiti"
+	"A3_Structures_F_EPB_Civ_Graffiti",
+	"CUP_CAStructuresHouse_A_FuelStation"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=20;
+		items=21;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -170,6 +171,11 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
+		class Item20
+		{
+			className="CUP_CAStructuresHouse_A_FuelStation";
+			name="CUP_CAStructuresHouse_A_FuelStation";
+		};
 	};
 };
 randomSeed=13949129;
@@ -200,7 +206,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=400;
+		items=460;
 		class Item0
 		{
 			dataType="Layer";
@@ -98803,6 +98809,7 @@ class Mission
 			};
 			id=403;
 			type="Land_Mil_House_ruins";
+			atlOffset=1.5258789e-005;
 		};
 		class Item396
 		{
@@ -99189,6 +99196,1035 @@ class Mission
 				};
 				nAttributes=17;
 			};
+		};
+		class Item400
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1951.7419,7.3858514,2240.0601};
+				angles[]={6.2671871,6.2507534,6.2818484};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=408;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item401
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1797.0608,7.33042,2193.8232};
+				angles[]={6.2578578,6.2507534,0.0013372133};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=409;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item402
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3646.3386,8.3549061,2465.8562};
+				angles[]={0,6.2507534,6.2818937};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=410;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.00033330917;
+		};
+		class Item403
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3656.7595,9.5263853,2519.4822};
+				angles[]={6.2578578,3.6115575,6.2671871};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=411;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item404
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4452.1519,7.4070239,2481.9221};
+				angles[]={0,4.5612082,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=412;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item405
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4530.4214,7.4240937,2397.8054};
+				angles[]={6.2818937,5.8133116,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=413;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item406
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6370.1392,7.5174937,2721.5261};
+				angles[]={0,5.4762564,6.2828403};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=414;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item407
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6821.8687,7.5290227,2643.188};
+				angles[]={0,2.3389707,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=415;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item408
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6634.1455,7.4270239,2272.3782};
+				angles[]={0,4.460084,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=416;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item409
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6849.5605,7.3995767,3120.9634};
+				angles[]={6.2805333,2.4808102,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=417;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item410
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8046.5664,7.1947832,3354.0317};
+				angles[]={0.0079935296,0.27623275,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=418;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item411
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10051.447,7.5290227,1843.7817};
+				angles[]={0,6.2507534,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=419;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item412
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10437.279,7.5192347,2366.2522};
+				angles[]={0.00084572798,0.07253249,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=420;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item413
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12054.228,7.4746981,3496.6487};
+				angles[]={0.012487104,6.2507534,0.001544081};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=421;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item414
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13390.674,7.3191657,5435.894};
+				angles[]={0.0012918708,6.2507534,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=422;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item415
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13410.869,6.9435825,6237.5752};
+				angles[]={6.2602773,6.2507534,0.022662206};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=423;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item416
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13513.374,4.7192526,6305.2012};
+				angles[]={6.2312469,1.0265092,6.2073092};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=424;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item417
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13396.396,5.3130431,6603.7363};
+				angles[]={6.2449818,6.0781398,0.023315638};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=425;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item418
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12971.98,7.8586454,8036.519};
+				angles[]={0.041308183,4.8120146,6.2352238};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=426;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item419
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12990.61,7.3519258,10074.651};
+				angles[]={6.2741294,3.2759683,6.2741294};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=427;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item420
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12814.042,7.380362,10134.114};
+				angles[]={0,3.5708067,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=428;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item421
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12424.467,8.5278664,9547.7246};
+				angles[]={0,6.2507534,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=429;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item422
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12257.441,19.833412,9479.7979};
+				angles[]={0.027198147,6.2507534,6.2750006};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=430;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item423
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12016.415,55.417027,9145.8555};
+				angles[]={0,6.2507534,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=431;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item424
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11968.163,69.56778,8936.4756};
+				angles[]={0.034652505,6.2507534,0.0039967569};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=432;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item425
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7079.1802,295.41702,7675.3931};
+				angles[]={0,6.2507534,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=433;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item426
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7251.625,295.31583,7661.5249};
+				angles[]={6.2738504,6.2507534,6.2818484};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=434;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item427
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6703.4063,7.6182084,2991.4966};
+				angles[]={6.2825875,1.2555879,6.2825875};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=435;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item428
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2687.8401,224.54701,5602.0303};
+				angles[]={0,6.2507534,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=436;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item429
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4730.3755,283.31335,6379.4834};
+				angles[]={0.066190854,6.2507534,6.2800975};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=437;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item430
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3649.4663,312.17075,8970.916};
+				angles[]={0.0066592805,2.3395627,0.0066592805};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=438;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-3.0517578e-005;
+		};
+		class Item431
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10150.87,239.18785,5307.4268};
+				angles[]={6.2086554,6.2507534,0.0026744273};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=439;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item432
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10154.439,240.69914,5304.2305};
+				angles[]={6.2086554,0.034505129,0.0026744273};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=442;
+			type="Land_A_FuelStation_Shed";
+		};
+		class Item433
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10449.455,224.50688,8867.0918};
+				angles[]={0,5.9082127,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=443;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item434
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10723.854,144.82634,10784.039};
+				angles[]={6.187479,1.8571966,0.033321146};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=445;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=0.032318115;
+		};
+		class Item435
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2018.6842,7.145947,2242.9768};
+				angles[]={0.023993526,6.2507534,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=446;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item436
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2657.0654,195.41702,5090.8916};
+				angles[]={0,6.2507534,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=447;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item437
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2771.3916,210.42157,5376.2129};
+				angles[]={6.282495,2.3107114,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=448;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item438
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3418.3276,244.84032,4908.1206};
+				angles[]={0.0026067093,6.1133852,0.060188636};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=449;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item439
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5853.749,138.30313,4709.2393};
+				angles[]={0.018201422,4.4547029,0.075577833};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=450;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item440
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7554.1597,215.40909,5139.1934};
+				angles[]={6.2815661,5.6168537,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=451;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=0.0004119873;
+		};
+		class Item441
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7581.835,221.4474,5259.0669};
+				angles[]={6.2391539,6.2507534,0.04732741};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=452;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item442
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9154.7549,224.69165,3794.157};
+				angles[]={0.023993526,1.4477264,6.2791886};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=453;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.0070037842;
+		};
+		class Item443
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12823.081,174.74803,4458.2578};
+				angles[]={6.2698536,4.3553162,0.10890165};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=454;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item444
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11228.467,78.265404,6565.5791};
+				angles[]={6.2578578,2.8438299,6.2551923};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=455;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item445
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12098.556,192.41702,7283.2505};
+				angles[]={0,6.2507534,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=456;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item446
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10654.138,212.28403,8018.8442};
+				angles[]={0,2.0911376,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=457;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item447
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10302.337,135.95938,9825.4385};
+				angles[]={0,5.7435284,6.1585021};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=458;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item448
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9409.7725,307.65442,8833.166};
+				angles[]={0.12274842,6.2507534,5.9240937};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=459;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.12466431;
+		};
+		class Item449
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6929.4595,295.41769,7800.0347};
+				angles[]={0.0013372133,6.2507534,6.2818484};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=460;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item450
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6023.6616,302.49533,7811.0439};
+				angles[]={0,3.8212955,6.2670755};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=461;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.0040283203;
+		};
+		class Item451
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5321.5068,335.4119,8624.0273};
+				angles[]={6.2702022,5.3139329,0.00077204045};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=462;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item452
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5989.2417,268.34531,10342.292};
+				angles[]={0.0044215783,5.1596818,0.00034526698};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=463;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item453
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3810.8413,312.42557,8935.6094};
+				angles[]={0,5.0980349,6.2818937};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=464;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.00033569336;
+		};
+		class Item454
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3075.1394,300.50903,7970.7598};
+				angles[]={0,3.7239571,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=465;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item455
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2994.2124,343.98816,7472.063};
+				angles[]={6.2312298,6.2507534,0.034655947};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=466;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=0.021636963;
+		};
+		class Item456
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2018.9592,265.12698,7384.9946};
+				angles[]={6.0960412,3.6166131,0.24314357};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=467;
+			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=0.10565186;
+		};
+		class Item457
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2674.9473,275.00745,9914.7158};
+				angles[]={6.2485313,6.0531812,0.015994642};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=468;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item458
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8544.2979,358.21402,6647.0854};
+				angles[]={6.2378831,2.3919795,6.2272415};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=469;
+			type="CUP_C_Skoda_Blue_CIV";
+		};
+		class Item459
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9601.8027,207.59776,6581.4077};
+				angles[]={0.05418935,3.4487975,0.0492948};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 0, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=470;
+			type="CUP_C_Skoda_Blue_CIV";
 		};
 	};
 };
