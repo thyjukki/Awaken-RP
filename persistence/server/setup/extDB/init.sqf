@@ -121,13 +121,13 @@ if (_return) then
 		};
 	};
 
-	_env = ["A3W_extDB_Environment", "normal"] call getPublicVar;
-	_mapID = ([format ["getServerMapID:%1:%2", worldName, _env], 2] call extDB_Database_async) select 0;
+	_map = ["A3W_extDB_Mapname", "normal"] call getPublicVar;
+	_mapID = ([format ["getServerMapID:%1", _map], 2] call extDB_Database_async) select 0;
 	if (_mapID == 0) then
 	{
-		[format ["insertServerMap:%1:%2", worldName, _env], 2] call extDB_Database_async;
+		[format ["insertServerMap:%1", _map], 2] call extDB_Database_async;
 
-		_mapID = ([format ["getServerMapID:%1:%2", worldName, _env], 2] call extDB_Database_async) select 0;
+		_mapID = ([format ["getServerMapID:%1", _map], 2] call extDB_Database_async) select 0;
 		if (_mapID == 0) then
 		{
 			diag_log format ["[extDB2] ███ Unable to create ServerMap with WorldName '%1'", worldName];

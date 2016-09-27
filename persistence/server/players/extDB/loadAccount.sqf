@@ -9,12 +9,11 @@ if (!isServer) exitWith {};
 params ["_UID", "_player"];
 private ["_result", "_data", "_location", "_dataTemp", "_ghostingTimer", "_secs", "_columns", "_pvar", "_pvarG"];
 
-private _crossMap = ["A3W_extDB_playerSaveCrossMap"] call isConfigOn;
-private _environment = ["A3W_extDB_Environment", "normal"] call getPublicVar;
+private _environment = ["A3W_extDB_Mapname", "chernarus"] call getPublicVar;
 private _mapID = call A3W_extDB_MapID;
 
 
-private _query = [["checkPlayerSave", _UID, _mapID], ["checkPlayerSaveXMap", _UID, _environment]] select _crossMap;
+private _query = ["checkPlayerSave", _UID, _mapID];
 _result = ([_query, 2] call extDB_Database_async) param [0,false];
 
 if (!_result) then
@@ -71,28 +70,11 @@ else
 
 	_location = ["Stance", "Position", "Direction"];
 
-	if (!_crossMap) then
-	{
-		_data append _location;
-	};
-
-	_query = [["getPlayerSave", _UID, _mapID], ["getPlayerSaveXMap", _UID, _environment]] select _crossMap;
+	_query = ["getPlayerSave", _UID, _mapID];
 	_query pushBack (_data joinString ",");
 	_result = [_query, 2] call extDB_Database_async;
 
 	{ _data set [_forEachIndex, [_data select _forEachIndex, _x]] } forEach _result;
-
-	if (_crossMap) then
-	{
-		_result = [["getPlayerSave", _UID, _mapID, _location joinString ","], 2] call extDB_Database_async;
-
-		if (count _result == count _location) then
-		{
-			{ _location set [_forEachIndex, [_location select _forEachIndex, _x]] } forEach _result;
-
-			_data append _location;
-		};
-	};
 
 	_dataTemp = _data;
 	_data = [["PlayerSaveValid", true]];
@@ -101,13 +83,13 @@ else
 
 	if (_ghostingTimer > 0) then
 	{
-		_query = [["getTimeSinceServerSwitch", _UID, _mapID], ["getTimeSinceServerSwitchXMap", _UID, _environment]] select _crossMap;
+		_query = ["getTimeSinceServerSwitch", _UID, _mapID];
 		_query pushBack call A3W_extDB_ServerID;
 		_result = [_query, 2] call extDB_Database_async;
 
 		if (count _result > 0) then
 		{
-			_secs = _result select 0; // [_result select 1] = LastServerID, if _crossMap then [_result select 2] = WorldName
+			_secs = _result select 0;
 
 			if (_secs < _ghostingTimer) then
 			{
