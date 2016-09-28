@@ -46,7 +46,15 @@ if (_uid call isAdmin) then
 				{
 					execVM "client\systems\adminPanel\playerTags.sqf";
 				};
-				case 4: //Teleport
+				case 4: //Vehicle Tags
+				{
+					execVM "client\systems\adminPanel\vehicleTags.sqf";
+				};
+				case 5: //Object Tags
+				{
+					//execVM "client\systems\adminPanel\objectTags.sqf";
+				};
+				case 6: //Teleport
 				{
 					closeDialog 0;
 					["A3W_teleport", "onMapSingleClick",
@@ -58,17 +66,17 @@ if (_uid call isAdmin) then
 					}] call BIS_fnc_addStackedEventHandler;
 					hint "Click on map to teleport";
 				};
-				case 5: //Debug Menu
+				case 7: //Debug Menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadDebugMenu.sqf";
 				};
-				case 6: //Object search menu
+				case 8: //Object search menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadObjectSearch.sqf";
 				};
-				case 7: // toggle God mode
+				case 9: // toggle God mode
 				{
 					execVM "client\systems\adminPanel\toggleGodMode.sqf";
 				};

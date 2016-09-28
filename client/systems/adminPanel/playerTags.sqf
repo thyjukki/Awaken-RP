@@ -16,12 +16,13 @@ if (_uid call isAdmin) then
 	{
 		adminPlayerMarkers = true;
 		hint "Player Markers ON";
-		["leadermarkers", "enabled"] call notifyAdminMenu;
+		["playermarkers", "enabled"] call notifyAdminMenu;
 	}
 	else
 	{
 		adminPlayerMarkers = false;
 		hint "Player Markers OFF";
+		["playermarkers", "enabled"] call notifyAdminMenu;
 	};
 
 	setGroupIconsVisible [true, true];
