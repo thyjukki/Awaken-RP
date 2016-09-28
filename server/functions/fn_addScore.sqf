@@ -57,6 +57,7 @@ if ((_isUnit && {isPlayer _player}) || {!_isUnit && !(_player in ["","0"])}) the
 	// sync Steam scoreboard
 	if (_isUnit) then
 	{
+		//TODO(Jukki) good place to put kill logs
 		_player addScore ((([_player, "playerKills", false] call fn_getScore) - ([_player, "teamKills", false] call fn_getScore)) - score _player);
 	};
 
