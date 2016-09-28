@@ -23,8 +23,7 @@ savePlayerHandle = [_this,
 
 		_info =
 		[
-			["Name", profileName],
-			["LastSide", str playerSide]//,
+			["Name", profileName]
 		];
 
 		_data = [player] call fn_getPlayerData;

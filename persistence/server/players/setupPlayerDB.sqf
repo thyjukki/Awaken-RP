@@ -32,11 +32,6 @@ A3W_fnc_checkPlayerFlag =
 
 		if (!isNull _player && alive _player && !(_player call A3W_fnc_isUnconscious)) then
 		{
-			_info append
-			[
-				["Bounty", _player getVariable ["bounty", 0]],
-				["BountyKills", _player getVariable ["bountyKills", 0]]
-			];
 
 			[_UID, _info, _data] call fn_saveAccount;
 		};
@@ -64,15 +59,6 @@ A3W_fnc_checkPlayerFlag =
 
 			missionNamespace setVariable [_pvarName, _data];
 			(owner _player) publicVariableClient _pvarName;
-
-			{
-				_x params ["_var", "_val"];
-				switch (_var) do
-				{
-					case "Bounty":       { _player setVariable ["bounty", _val, true] };
-					case "BountyKills":  { _player setVariable ["bountyKills", _val, true] };
-				};
-			} forEach _data;
 
 			diag_log format ["pvar_requestPlayerData: %1", [owner _player, _player, objectFromNetId _pNetId]];
 		}] execFSM "call.fsm";

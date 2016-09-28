@@ -6,9 +6,8 @@
 
 #include "functions.sqf"
 
-private ["_maxLifetime", "_maxUnusedTime", "_worldDir", "_methodDir", "_vehCount", "_vehicles", "_exclVehicleIDs"];
+private [""_maxUnusedTime", "_worldDir", "_methodDir", "_vehCount", "_vehicles", "_exclVehicleIDs"];
 
-_maxLifetime = ["A3W_vehicleLifetime", 0] call getPublicVar;
 _maxUnusedTime = ["A3W_vehicleMaxUnusedTime", 0] call getPublicVar;
 
 _worldDir = "persistence\server\world";
@@ -32,7 +31,7 @@ _exclVehicleIDs = [];
 
 	private _valid = false;
 
-	if (!isNil "_class" && !isNil "_pos" && {count _pos == 3 && (_maxLifetime <= 0 || _hoursAlive < _maxLifetime) && (_maxUnusedTime <= 0 || _hoursUnused < _maxUnusedTime)}) then
+	if (!isNil "_class" && !isNil "_pos" && {count _pos == 3 && (_maxUnusedTime <= 0 || _hoursUnused < _maxUnusedTime)}) then
 	{
 		_vehCount = _vehCount + 1;
 		_valid = true;

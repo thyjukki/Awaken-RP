@@ -30,8 +30,6 @@ _getValue =
 };
 
 ["Donator", "NUMBER", "PlayerInfo"] call _getValue;
-["Bounty", "NUMBER", "PlayerInfo"] call _getValue;
-["BountyKills", "ARRAY", "PlayerInfo"] call _getValue;
 
 ["Damage", "NUMBER"] call _getValue;
 ["HitPoints", "ARRAY"] call _getValue;

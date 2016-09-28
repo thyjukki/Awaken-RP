@@ -34,8 +34,7 @@ _flying = (!isTouchingGround _veh && (getPos _veh) select 2 > 1);
 private _props = [_veh, _flying] call fn_getVehicleProperties;
 _props append
 [
-	["Flying", [0,1] select _flying],
-	["Parked", [0,1] select _park]
+	["Flying", [0,1] select _flying]
 ];
 
 _updateValues = [_props, 0] call extDB_pairsToSQL;
@@ -53,10 +52,5 @@ if (_lastUse > _veh getVariable ["vehSaving_lastUseSave", _spawningTime]) then
 };
 
 [format ["updateServerVehicle:%1:", _vehicleID] + _updateValues] call extDB_Database_async;
-
-if (_park) then
-{
-	_veh setVariable ["A3W_parkedProperties", _props];
-};
 
 _vehicleID

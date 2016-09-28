@@ -48,6 +48,8 @@ if !(_unit getVariable ["A3W_killScoreRegistered", false]) then
 
 	if (isPlayer _killer) then
 	{
+		
+
 		if (isNull _killerGroup) exitWith {}; // we have no idea on which team the killer was when the kill occured, abort!
 
 		private ["_scoreColumn", "_scoreValue"];

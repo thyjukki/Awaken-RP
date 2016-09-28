@@ -101,19 +101,10 @@ else
 	_data append _dataTemp;
 };
 
-private _bounty = 0;
-private _bountyKills = [];
-
-_data append
-[
-	["Bounty", _bounty],
-	["BountyKills", _bountyKills]
-];
-
 // before returning player data, restore global player stats if applicable
 if (["A3W_playerStatsGlobal"] call isConfigOn) then
 {
-	_columns = ["playerKills", "aiKills", "teamKills", "deathCount", "reviveCount", "captureCount"];
+	_columns = ["playerKills", "aiKills", "teamKills", "deathCount", "reviveCount"];
 	_result = [["getPlayerStats", _UID, _columns joinString ","], 2] call extDB_Database_async;
 
 	{
