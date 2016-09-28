@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=471;
+		nextID=513;
 	};
 	class LayerIndexProvider
 	{
-		nextID=12;
+		nextID=16;
 	};
 	class Camera
 	{
-		pos[]={9601.2861,229.07707,6575.0581};
-		dir[]={0.92958945,-0.33247387,-0.15918458};
-		up[]={0.32770881,0.94310874,-0.056117468};
-		aside[]={-0.16878651,-1.0820804e-007,-0.98565716};
+		pos[]={11439.961,250.27356,7449.0078};
+		dir[]={0.82445735,-0.56275272,-0.060327187};
+		up[]={0.56126726,0.82661402,-0.041069359};
+		aside[]={-0.072979309,-8.9157766e-009,-0.99736124};
 	};
 };
 binarizationWanted=0;
@@ -44,16 +44,20 @@ addons[]=
 	"A3_Structures_F_Walls",
 	"CUP_CWA_Misc",
 	"A3_Structures_F_Mil_TentHangar",
-	"A3_Props_F_Exp_Military_Camps",
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Structures_F_EPB_Civ_Graffiti",
-	"CUP_CAStructuresHouse_A_FuelStation"
+	"CUP_CAStructuresHouse_A_FuelStation",
+	"A3_Structures_F_Mil_Shelters",
+	"WW2_Terrains_c_Structures_Buildings_c",
+	"CUP_WheeledVehicles_UAZ",
+	"CUP_WheeledVehicles_LR",
+	"CUP_WheeledVehicles_Ural"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=21;
+		items=24;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -159,22 +163,35 @@ class AddonsMetaData
 		};
 		class Item18
 		{
-			className="A3_Props_F_Exp";
-			name="Arma 3 Apex - Decorative and Mission Objects";
-			author="Bohemia Interactive";
-			url="http://www.arma3.com";
-		};
-		class Item19
-		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item20
+		class Item19
 		{
 			className="CUP_CAStructuresHouse_A_FuelStation";
 			name="CUP_CAStructuresHouse_A_FuelStation";
+		};
+		class Item20
+		{
+			className="WW2_Terrains_c_Structures_Buildings_c";
+			name="WW2_Terrains_c_Structures_Buildings_c";
+		};
+		class Item21
+		{
+			className="CUP_WheeledVehicles_UAZ";
+			name="CUP_WheeledVehicles_UAZ";
+		};
+		class Item22
+		{
+			className="CUP_WheeledVehicles_LR";
+			name="CUP_WheeledVehicles_LR";
+		};
+		class Item23
+		{
+			className="CUP_WheeledVehicles_Ural";
+			name="CUP_WheeledVehicles_Ural";
 		};
 	};
 };
@@ -206,7 +223,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=460;
+		items=482;
 		class Item0
 		{
 			dataType="Layer";
@@ -98685,22 +98702,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6344.3618,306.14072,7809.5093};
-				angles[]={0.0053265258,3.7508948,6.2805333};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=373;
-			type="Land_IRMaskingCover_02_F";
-		};
-		class Item389
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={6363.3975,309.02032,7804.645};
 				angles[]={0,2.2105143,0};
 			};
@@ -98713,7 +98714,7 @@ class Mission
 			id=376;
 			type="Land_TentHangar_V1_ruins_F";
 		};
-		class Item390
+		class Item389
 		{
 			dataType="Object";
 			class PositionInfo
@@ -98729,7 +98730,7 @@ class Mission
 			id=377;
 			type="Mi8Wreck";
 		};
-		class Item391
+		class Item390
 		{
 			dataType="Object";
 			class PositionInfo
@@ -98745,7 +98746,7 @@ class Mission
 			id=378;
 			type="Land_HelipadRescue_F";
 		};
-		class Item392
+		class Item391
 		{
 			dataType="Object";
 			class PositionInfo
@@ -98761,7 +98762,7 @@ class Mission
 			type="Land_Graffiti_03_F";
 			atlOffset=1.6753845;
 		};
-		class Item393
+		class Item392
 		{
 			dataType="Object";
 			class PositionInfo
@@ -98777,7 +98778,7 @@ class Mission
 			id=386;
 			type="MASH";
 		};
-		class Item394
+		class Item393
 		{
 			dataType="Object";
 			class PositionInfo
@@ -98793,7 +98794,7 @@ class Mission
 			id=401;
 			type="C130J_wreck_EP1";
 		};
-		class Item395
+		class Item394
 		{
 			dataType="Object";
 			class PositionInfo
@@ -98811,7 +98812,7 @@ class Mission
 			type="Land_Mil_House_ruins";
 			atlOffset=1.5258789e-005;
 		};
-		class Item396
+		class Item395
 		{
 			dataType="Object";
 			class PositionInfo
@@ -98827,7 +98828,7 @@ class Mission
 			id=404;
 			type="Land_Mil_Barracks_i";
 		};
-		class Item397
+		class Item396
 		{
 			dataType="Object";
 			class PositionInfo
@@ -98843,7 +98844,7 @@ class Mission
 			id=405;
 			type="Land_Mil_Barracks_i";
 		};
-		class Item398
+		class Item397
 		{
 			dataType="Object";
 			class PositionInfo
@@ -98859,7 +98860,7 @@ class Mission
 			id=406;
 			type="Land_Mil_House";
 		};
-		class Item399
+		class Item398
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -99197,7 +99198,7 @@ class Mission
 				nAttributes=17;
 			};
 		};
-		class Item400
+		class Item399
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99214,7 +99215,7 @@ class Mission
 			id=408;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item401
+		class Item400
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99231,7 +99232,7 @@ class Mission
 			id=409;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item402
+		class Item401
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99247,9 +99248,9 @@ class Mission
 			};
 			id=410;
 			type="CUP_C_Skoda_Blue_CIV";
-			atlOffset=-0.00033330917;
+			atlOffset=-0.00033378601;
 		};
-		class Item403
+		class Item402
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99265,8 +99266,9 @@ class Mission
 			};
 			id=411;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-6.6757202e-006;
 		};
-		class Item404
+		class Item403
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99283,7 +99285,7 @@ class Mission
 			id=412;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item405
+		class Item404
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99299,8 +99301,9 @@ class Mission
 			};
 			id=413;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-5.2452087e-006;
 		};
-		class Item406
+		class Item405
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99316,8 +99319,9 @@ class Mission
 			};
 			id=414;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=0.10176754;
 		};
-		class Item407
+		class Item406
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99334,7 +99338,7 @@ class Mission
 			id=415;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item408
+		class Item407
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99351,13 +99355,13 @@ class Mission
 			id=416;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item409
+		class Item408
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6849.5605,7.3995767,3120.9634};
-				angles[]={6.2805333,2.4808102,0};
+				position[]={6849.561,7.3995976,3120.9631};
+				angles[]={6.2805324,2.4808109,0};
 			};
 			side="Empty";
 			flags=4;
@@ -99368,7 +99372,7 @@ class Mission
 			id=417;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item410
+		class Item409
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99384,8 +99388,9 @@ class Mission
 			};
 			id=418;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-3.1471252e-005;
 		};
-		class Item411
+		class Item410
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99402,7 +99407,7 @@ class Mission
 			id=419;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item412
+		class Item411
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99418,8 +99423,9 @@ class Mission
 			};
 			id=420;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=0.10221148;
 		};
-		class Item413
+		class Item412
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99436,7 +99442,7 @@ class Mission
 			id=421;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item414
+		class Item413
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99453,7 +99459,7 @@ class Mission
 			id=422;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item415
+		class Item414
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99469,8 +99475,9 @@ class Mission
 			};
 			id=423;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.0001783371;
 		};
-		class Item416
+		class Item415
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99486,8 +99493,9 @@ class Mission
 			};
 			id=424;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.0078175068;
 		};
-		class Item417
+		class Item416
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99504,7 +99512,7 @@ class Mission
 			id=425;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item418
+		class Item417
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99520,8 +99528,9 @@ class Mission
 			};
 			id=426;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-4.2915344e-006;
 		};
-		class Item419
+		class Item418
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99537,8 +99546,9 @@ class Mission
 			};
 			id=427;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-4.9591064e-005;
 		};
-		class Item420
+		class Item419
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99554,8 +99564,9 @@ class Mission
 			};
 			id=428;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-8.1062317e-006;
 		};
-		class Item421
+		class Item420
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99571,8 +99582,9 @@ class Mission
 			};
 			id=429;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=4.7683716e-007;
 		};
-		class Item422
+		class Item421
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99588,8 +99600,9 @@ class Mission
 			};
 			id=430;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.00022506714;
 		};
-		class Item423
+		class Item422
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99606,7 +99619,7 @@ class Mission
 			id=431;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item424
+		class Item423
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99622,8 +99635,9 @@ class Mission
 			};
 			id=432;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.014938354;
 		};
-		class Item425
+		class Item424
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99640,7 +99654,7 @@ class Mission
 			id=433;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item426
+		class Item425
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99657,7 +99671,7 @@ class Mission
 			id=434;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item427
+		class Item426
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99674,7 +99688,7 @@ class Mission
 			id=435;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item428
+		class Item427
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99691,7 +99705,7 @@ class Mission
 			id=436;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item429
+		class Item428
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99707,8 +99721,9 @@ class Mission
 			};
 			id=437;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.00015258789;
 		};
-		class Item430
+		class Item429
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99726,7 +99741,7 @@ class Mission
 			type="CUP_C_Skoda_Blue_CIV";
 			atlOffset=-3.0517578e-005;
 		};
-		class Item431
+		class Item430
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99742,8 +99757,9 @@ class Mission
 			};
 			id=439;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-4.5776367e-005;
 		};
-		class Item432
+		class Item431
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99759,7 +99775,7 @@ class Mission
 			id=442;
 			type="Land_A_FuelStation_Shed";
 		};
-		class Item433
+		class Item432
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99776,7 +99792,7 @@ class Mission
 			id=443;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item434
+		class Item433
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99792,9 +99808,9 @@ class Mission
 			};
 			id=445;
 			type="CUP_C_Skoda_Blue_CIV";
-			atlOffset=0.032318115;
+			atlOffset=0.032348633;
 		};
-		class Item435
+		class Item434
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99810,8 +99826,9 @@ class Mission
 			};
 			id=446;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-4.196167e-005;
 		};
-		class Item436
+		class Item435
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99828,7 +99845,7 @@ class Mission
 			id=447;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item437
+		class Item436
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99844,8 +99861,9 @@ class Mission
 			};
 			id=448;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.00050354004;
 		};
-		class Item438
+		class Item437
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99861,8 +99879,9 @@ class Mission
 			};
 			id=449;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-6.1035156e-005;
 		};
-		class Item439
+		class Item438
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99879,7 +99898,7 @@ class Mission
 			id=450;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item440
+		class Item439
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99897,7 +99916,7 @@ class Mission
 			type="CUP_C_Skoda_Blue_CIV";
 			atlOffset=0.0004119873;
 		};
-		class Item441
+		class Item440
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99913,8 +99932,9 @@ class Mission
 			};
 			id=452;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.00053405762;
 		};
-		class Item442
+		class Item441
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99932,7 +99952,7 @@ class Mission
 			type="CUP_C_Skoda_Blue_CIV";
 			atlOffset=-0.0070037842;
 		};
-		class Item443
+		class Item442
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99948,8 +99968,9 @@ class Mission
 			};
 			id=454;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.0013122559;
 		};
-		class Item444
+		class Item443
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99965,8 +99986,9 @@ class Mission
 			};
 			id=455;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.0035629272;
 		};
-		class Item445
+		class Item444
 		{
 			dataType="Object";
 			class PositionInfo
@@ -99983,7 +100005,7 @@ class Mission
 			id=456;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item446
+		class Item445
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100000,7 +100022,7 @@ class Mission
 			id=457;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item447
+		class Item446
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100016,8 +100038,9 @@ class Mission
 			};
 			id=458;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.0025024414;
 		};
-		class Item448
+		class Item447
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100035,7 +100058,7 @@ class Mission
 			type="CUP_C_Skoda_Blue_CIV";
 			atlOffset=-0.12466431;
 		};
-		class Item449
+		class Item448
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100051,8 +100074,9 @@ class Mission
 			};
 			id=460;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-3.0517578e-005;
 		};
-		class Item450
+		class Item449
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100070,7 +100094,7 @@ class Mission
 			type="CUP_C_Skoda_Blue_CIV";
 			atlOffset=-0.0040283203;
 		};
-		class Item451
+		class Item450
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100087,7 +100111,7 @@ class Mission
 			id=462;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item452
+		class Item451
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100104,7 +100128,7 @@ class Mission
 			id=463;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item453
+		class Item452
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100122,7 +100146,7 @@ class Mission
 			type="CUP_C_Skoda_Blue_CIV";
 			atlOffset=-0.00033569336;
 		};
-		class Item454
+		class Item453
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100139,7 +100163,7 @@ class Mission
 			id=465;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item455
+		class Item454
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100157,7 +100181,7 @@ class Mission
 			type="CUP_C_Skoda_Blue_CIV";
 			atlOffset=0.021636963;
 		};
-		class Item456
+		class Item455
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100175,7 +100199,7 @@ class Mission
 			type="CUP_C_Skoda_Blue_CIV";
 			atlOffset=0.10565186;
 		};
-		class Item457
+		class Item456
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100192,7 +100216,7 @@ class Mission
 			id=468;
 			type="CUP_C_Skoda_Blue_CIV";
 		};
-		class Item458
+		class Item457
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100208,8 +100232,9 @@ class Mission
 			};
 			id=469;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-0.00057983398;
 		};
-		class Item459
+		class Item458
 		{
 			dataType="Object";
 			class PositionInfo
@@ -100225,6 +100250,397 @@ class Mission
 			};
 			id=470;
 			type="CUP_C_Skoda_Blue_CIV";
+			atlOffset=-3.0517578e-005;
+		};
+		class Item459
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6342.3584,306.22543,7812.6079};
+				angles[]={0.0053265258,3.9965961,6.2805333};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=474;
+			type="CamoNet_INDP_F";
+		};
+		class Item460
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6362.3682,306.70282,7784.2095};
+				angles[]={0.0093350215,0.69521558,6.2818484};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=476;
+			type="Land_WW2_setka_tank";
+		};
+		class Item461
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6360.3965,305.10071,7781.936};
+				angles[]={0.014660765,3.8281529,6.2765183};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=478;
+			type="CUP_B_UAZ_Unarmed_ACR";
+		};
+		class Item462
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4626.4717,339.00281,9581.4141};
+				angles[]={6.2818484,3.8281529,0.0013372133};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=479;
+			type="CUP_B_UAZ_Unarmed_ACR";
+			atlOffset=0.00067138672;
+		};
+		class Item463
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4625.7598,339.04709,9675.8633};
+				angles[]={0.0012915437,3.334347,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=480;
+			type="CUP_B_UAZ_Unarmed_ACR";
+		};
+		class Item464
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3693.2473,402.04828,5968.2969};
+				angles[]={0,5.924974,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=481;
+			type="CUP_B_UAZ_Unarmed_ACR";
+		};
+		class Item465
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12133.522,159.00565,12635.779};
+				angles[]={6.2698536,3.6107264,0.013332055};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=482;
+			type="CUP_B_UAZ_Unarmed_ACR";
+		};
+		class Item466
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12000.474,158.84827,12667.738};
+				angles[]={0,5.7512231,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=483;
+			type="CUP_B_UAZ_Unarmed_ACR";
+		};
+		class Item467
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6286.5679,304.91354,7803.6069};
+				angles[]={6.2578578,3.8281529,0.026657995};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=484;
+			type="CUP_B_UAZ_Unarmed_ACR";
+		};
+		class Item468
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4724.8149,340.80438,10326.041};
+				angles[]={0,5.7558084,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 2, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=485;
+			type="CUP_B_LR_Transport_CZ_W";
+		};
+		class Item469
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4749.7715,8.805254,2586.6091};
+				angles[]={0,3.6769831,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=486;
+			type="CUP_B_UAZ_Unarmed_ACR";
+		};
+		class Item470
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5146.0239,9.0482674,2328.0525};
+				angles[]={0,5.2780609,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=487;
+			type="CUP_B_UAZ_Unarmed_ACR";
+		};
+		class Item471
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6837.9971,6.0482669,2499.5339};
+				angles[]={0,3.334347,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=488;
+			type="CUP_B_UAZ_Unarmed_ACR";
+		};
+		class Item472
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12059.023,160.66138,12631.268};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 2, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=489;
+			type="CUP_B_LR_Transport_CZ_W";
+		};
+		class Item473
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10316.889,363.57401,12082.248};
+				angles[]={6.2756763,0,6.2477641};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 2, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=490;
+			type="CUP_B_LR_Transport_CZ_W";
+		};
+		class Item474
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6889.7109,395.97745,11459.503};
+				angles[]={0.013336525,0,0.027993103};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 2, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=491;
+			type="CUP_B_LR_Transport_CZ_W";
+			atlOffset=0.0036621094;
+		};
+		class Item475
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1320.9457,332.80438,13386.143};
+				angles[]={0,0.88795602,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 2, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=506;
+			type="CUP_B_LR_Transport_CZ_W";
+		};
+		class Item476
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13293.178,11.597694,6107.6289};
+				angles[]={0.021240657,0,0.12105604};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 3, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=507;
+			type="CUP_B_Ural_CDF";
+		};
+		class Item477
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13109.175,8.396204,7094.2432};
+				angles[]={0,2.8617299,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="_nil = [this, 3, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=508;
+			type="CUP_B_Ural_CDF";
+			atlOffset=0.25419807;
+		};
+		class Item478
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12758.427,8.1890249,9638.7148};
+				angles[]={0,0.19371438,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 3, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=509;
+			type="CUP_B_Ural_CDF";
+		};
+		class Item479
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10823.38,8.1890249,2709.1147};
+				angles[]={0,0.40741926,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 3, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=510;
+			type="CUP_B_Ural_CDF";
+		};
+		class Item480
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3683.4541,306.22678,8247.1055};
+				angles[]={6.2698579,3.4951208,0.082478598};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 3, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=511;
+			type="CUP_B_Ural_CDF";
+		};
+		class Item481
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={11436.831,223.18903,7465.5957};
+				angles[]={0,3.2428837,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 3, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=512;
+			type="CUP_B_Ural_CDF";
 		};
 	};
 };
