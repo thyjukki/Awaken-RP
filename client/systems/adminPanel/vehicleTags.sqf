@@ -38,7 +38,7 @@ if (_uid call isAdmin) then
 				_ID = _x getVariable ["A3W_vehicleID", format ["UNKNOWN:%1", _uCounter]];
 				_uCounter = _uCounter + 1;
 				_marker = format ["ID:%1", _ID];
-				_marker = createMarkerLocal _marker;
+				_marker = createMarkerLocal [_marker,position _x];
 				_marker setMarkerColorLocal "ColorBlue";
 				_marker setMarkerShape "ICON";
 				_marker setMarkerType "hd_dot";
@@ -47,9 +47,8 @@ if (_uid call isAdmin) then
 			};
 			
 			_marker setMarkerPosLocal (position _x);
-			_marker setMarkerTextLocal format ["%1 - %2 (%3m)", _marker, name _x, round (_x distance player)];
-
-			group _x addGroupIcon [_groupIcon];
+			_name = getText (configFile >> "cfgVehicles" >> typeOf _x >> "displayname");
+			_marker setMarkerTextLocal format ["%1 - %2 (%3m)", _marker, _name, round (_x distance player)];
 		} forEach vehicles;
 
 		sleep 0.5;

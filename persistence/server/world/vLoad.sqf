@@ -6,7 +6,7 @@
 
 #include "functions.sqf"
 
-private [""_maxUnusedTime", "_worldDir", "_methodDir", "_vehCount", "_vehicles", "_exclVehicleIDs"];
+private ["_maxUnusedTime", "_worldDir", "_methodDir", "_vehCount", "_vehicles", "_exclVehicleIDs"];
 
 _maxUnusedTime = ["A3W_vehicleMaxUnusedTime", 0] call getPublicVar;
 

@@ -10,7 +10,7 @@ _maxUnusedTime = ["A3W_vehicleMaxUnusedTime", 0] call getPublicVar;
 
 if (_maxUnusedTime > 0) then
 {
-	[format ["deleteExpiredServerVehicles:%1:%2:%3", call A3W_extDB_ServerID, call A3W_extDB_MapIDpark, _maxUnusedTime], 2, true] call extDB_Database_async;
+	[format ["deleteExpiredServerVehicles:%1:%2:%3", call A3W_extDB_ServerID, call A3W_extDB_MapID, _maxUnusedTime], 2, true] call extDB_Database_async;
 };
 
 _vars = call fn_getVehicleVars;

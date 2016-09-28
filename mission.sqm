@@ -100300,6 +100300,7 @@ class Mission
 			};
 			id=478;
 			type="CUP_B_UAZ_Unarmed_ACR";
+			atlOffset=0.00015258789;
 		};
 		class Item462
 		{
@@ -100335,6 +100336,7 @@ class Mission
 			};
 			id=480;
 			type="CUP_B_UAZ_Unarmed_ACR";
+			atlOffset=-3.0517578e-005;
 		};
 		class Item464
 		{
@@ -100403,6 +100405,7 @@ class Mission
 			};
 			id=484;
 			type="CUP_B_UAZ_Unarmed_ACR";
+			atlOffset=0.0020446777;
 		};
 		class Item468
 		{
@@ -100504,6 +100507,7 @@ class Mission
 			};
 			id=490;
 			type="CUP_B_LR_Transport_CZ_W";
+			atlOffset=-0.0092468262;
 		};
 		class Item474
 		{
@@ -100566,13 +100570,14 @@ class Mission
 				angles[]={0,2.8617299,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="_nil = [this, 3, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
 			};
 			id=508;
 			type="CUP_B_Ural_CDF";
-			atlOffset=0.25419807;
+			atlOffset=0.2171793;
 		};
 		class Item478
 		{
@@ -100624,6 +100629,7 @@ class Mission
 			};
 			id=511;
 			type="CUP_B_Ural_CDF";
+			atlOffset=-0.00024414063;
 		};
 		class Item481
 		{
