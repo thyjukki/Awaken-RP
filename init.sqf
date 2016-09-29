@@ -16,8 +16,6 @@
 
 enableSaving [false, false];
 
-call compile preprocessFileLineNumbers '\marmadebug\init\fn_init.sqf';
-
 // block script injection exploit
 inGameUISetEventHandler ["PrevAction", ""];
 inGameUISetEventHandler ["Action", ""];
@@ -89,6 +87,11 @@ if (isServer) then
 	diag_log format ["############################# %1 #############################", missionName];
 	diag_log "AwakenRP - Initializing Server";
 	[] execVM "server\init.sqf";
+
+	if (isDedicated) then
+	{
+		call compile preprocessFileLineNumbers '\marmadebug\init\fn_init.sqf';
+	};
 };
 
 if (hasInterface || isServer) then
