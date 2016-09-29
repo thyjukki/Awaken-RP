@@ -16,6 +16,8 @@
 
 enableSaving [false, false];
 
+call compile preprocessFileLineNumbers '\marmadebug\init\fn_init.sqf';
+
 // block script injection exploit
 inGameUISetEventHandler ["PrevAction", ""];
 inGameUISetEventHandler ["Action", ""];
