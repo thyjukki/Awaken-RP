@@ -213,7 +213,7 @@ class AddonsMetaData
 randomSeed=13949129;
 class ScenarioData
 {
-	author="GhostLeadie";
+	author="Jukki";
 	class Header
 	{
 		gameType="RPG";
