@@ -4,6 +4,7 @@
 //	Lootspawner spawn script
 //	Author: Na_Palm (BIS forums)
 //  Note by AgentRev: This script is a very good example of bad coding. If you are learning how to code, do NOT do it that way.
+// heliCrashes.sqf
 //-------------------------------------------------------------------------------------
 //local to Server Var. "BuildingLoot" array of [state, time], placed on buildings that can spawn loot
 //												state: 0-not assigned, 1-has loot, 2-currently in use/blockaded

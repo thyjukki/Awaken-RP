@@ -5,21 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=513;
+		nextID=548;
+	};
+	class MarkerIDProvider
+	{
+		nextID=3;
 	};
 	class LayerIndexProvider
 	{
-		nextID=16;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={11439.961,250.27356,7449.0078};
-		dir[]={0.82445735,-0.56275272,-0.060327187};
-		up[]={0.56126726,0.82661402,-0.041069359};
-		aside[]={-0.072979309,-8.9157766e-009,-0.99736124};
+		pos[]={11377.539,623.61804,3080.95};
+		dir[]={-0.67840737,-0.44417265,-0.58542395};
+		up[]={-0.33636406,0.89585787,-0.29025659};
+		aside[]={-0.65338087,2.3317989e-007,0.75716072};
 	};
 };
 binarizationWanted=0;
@@ -51,13 +55,16 @@ addons[]=
 	"WW2_Terrains_c_Structures_Buildings_c",
 	"CUP_WheeledVehicles_UAZ",
 	"CUP_WheeledVehicles_LR",
-	"CUP_WheeledVehicles_Ural"
+	"CUP_WheeledVehicles_Ural",
+	"A3_Structures_F_EPC_Dominants_GhostHotel",
+	"A3_Rocks_F_Blunt",
+	"A3_Structures_F_Mil_Barracks"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=24;
+		items=27;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -163,35 +170,54 @@ class AddonsMetaData
 		};
 		class Item18
 		{
+			className="101_editor";
+			name="101_editor";
+		};
+		class Item19
+		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item19
+		class Item20
 		{
 			className="CUP_CAStructuresHouse_A_FuelStation";
 			name="CUP_CAStructuresHouse_A_FuelStation";
 		};
-		class Item20
+		class Item21
 		{
 			className="WW2_Terrains_c_Structures_Buildings_c";
 			name="WW2_Terrains_c_Structures_Buildings_c";
 		};
-		class Item21
+		class Item22
 		{
 			className="CUP_WheeledVehicles_UAZ";
 			name="CUP_WheeledVehicles_UAZ";
 		};
-		class Item22
+		class Item23
 		{
 			className="CUP_WheeledVehicles_LR";
 			name="CUP_WheeledVehicles_LR";
 		};
-		class Item23
+		class Item24
 		{
 			className="CUP_WheeledVehicles_Ural";
 			name="CUP_WheeledVehicles_Ural";
+		};
+		class Item25
+		{
+			className="A3_Structures_F_EPC";
+			name="Arma 3 Win Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item26
+		{
+			className="A3_Rocks_F";
+			name="Arma 3 - Rocks and Stones";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
 		};
 	};
 };
@@ -223,7 +249,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=482;
+		items=491;
 		class Item0
 		{
 			dataType="Layer";
@@ -100647,6 +100673,146 @@ class Mission
 			};
 			id=512;
 			type="CUP_B_Ural_CDF";
+		};
+		class Item482
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9551.21,87.821404,13764.813};
+				angles[]={0,3.4563775,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=515;
+			type="Land_GH_MainBuilding_entry_F";
+			atlOffset=2.6276703;
+		};
+		class Item483
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9527.0596,88.706238,13761.834};
+				angles[]={0,3.4563775,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=519;
+			type="Land_GH_MainBuilding_left_F";
+			atlOffset=3.5685501;
+		};
+		class Item484
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9568.9834,88.725586,13748.17};
+				angles[]={0,3.4563775,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=520;
+			type="Land_GH_MainBuilding_right_F";
+			atlOffset=3.5685501;
+		};
+		class Item485
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9549.5859,87.097549,13759.846};
+				angles[]={0,3.4563627,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=513;
+			type="Land_GH_MainBuilding_middle_F";
+			atlOffset=3.536171;
+		};
+		class Item486
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9550.3164,79.627548,13720.523};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=543;
+			type="Land_GH_Gazebo_ruins_F";
+			atlOffset=0.98454285;
+		};
+		class Item487
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9561.7227,86.404411,13775.731};
+				angles[]={6.1258302,0,6.2765174};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				createAsSimpleObject=1;
+			};
+			id=544;
+			type="Land_BluntStone_02";
+			atlOffset=-0.088829041;
+		};
+		class Item488
+		{
+			dataType="Marker";
+			position[]={9548.3926,81.098999,13749.279};
+			name="marker_2";
+			type="loc_Tourism";
+			id=545;
+		};
+		class Item489
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={12255.271,159,12578.484};
+				angles[]={0,3.5156338,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=546;
+			type="Land_i_Barracks_V1_F";
+		};
+		class Item490
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4671.1494,338.99979,10672.338};
+				angles[]={0,1.3740368,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=547;
+			type="Land_i_Barracks_V1_F";
 		};
 	};
 };

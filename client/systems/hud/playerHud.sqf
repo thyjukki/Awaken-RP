@@ -50,7 +50,7 @@ while {true} do
 	_food = ceil (hungerLevel max 0) / 100.0;
 	_thirst = ceil (thirstLevel max 0) / 100.0;
 
-	_bloodLvl = 5 min (0 max (round(5.0*(_blood))));
+	_bloodLvl = 6 min (0 max (round(6.0*(_blood))));
 	_thirstLvl = 4 min (0 max (round(4.0*(_thirst))));
 	_foodLvl = 4 min (0 max (round(4.0*(_food))));
 

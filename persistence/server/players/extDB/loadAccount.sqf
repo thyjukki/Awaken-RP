@@ -29,6 +29,8 @@ else
 	// The order of these values is EXTREMELY IMPORTANT!
 	_data =
 	[
+		"Position",
+		"Direction",
 		"Damage",
 		"HitPoints",
 
