@@ -12,19 +12,3 @@ cfg_va_unflip_wait_distance = 10;
 
 //display the "Pull {PlayerName}" action
 cfg_va_pull_player_action_on = true;
-
-//display lock/unlock actions 
-cfg_va_lock_action_on = ["A3W_vehicleLocking"] call isConfigOn;
-
-//Only the player with UID that matches "ownerUID" variable can lock/unlock the vehicle
-cfg_va_lock_owner_only = true;
-
-//Playe lock/unlock sound
-cfg_va_lock_sound_play = true;
-
-//Any player can lock/unlock the vehicle from the inside
-cfg_va_lock_from_inside = true;
-
-//List of classes for vehicles that can locked/unlocked (empty means all)
-cfg_va_lock_actions_classes_list = ["LandVehicle", "Air", "Ship"];
-cfg_va_lock_actions_classes_list_excl = ["StaticWeapon"];

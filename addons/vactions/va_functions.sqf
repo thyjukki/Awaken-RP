@@ -12,11 +12,6 @@ cfg_va_unflip_action_on = OR_BOOLEAN(cfg_va_unflip_action_on,true);
 cfg_va_unflip_wait_time = OR_POSITIVE(cfg_va_unflip_wait_time,10);
 cfg_va_unflip_wait_distance = OR_POSITIVE(cfg_va_unflip_wait_distance,10);
 cfg_va_pull_player_action_on = OR_BOOLEAN(cfg_va_pull_player_action_on,true);
-cfg_va_lock_action_on = OR_BOOLEAN(cfg_va_lock_action_on,true);
-cfg_va_lock_owner_only = OR_BOOLEAN(cfg_va_lock_owner_only,true);
-cfg_va_lock_from_inside = OR_BOOLEAN(cfg_va_lock_from_inside,true);
-cfg_va_lock_actions_classes_list = OR_ARRAY(cfg_va_lock_actions_classes_list,[]);
-cfg_va_lock_sound_play = OR_BOOLEAN(cfg_va_lock_sound_play,true);
 
 
 va_player_inside = {
@@ -266,125 +261,6 @@ va_information_action = {
   hint parseText _text;
 };
 
-va_lock = {
-  _this pushBack 2;
-  _this call va_remote_lock;
-};
-
-va_unlock = {
-  _this pushBack 0;
-  _this call va_remote_lock;
-};
-
-
-/*
-  0 - Unlocked
-  1 - Default
-  2 - Locked
-  3 - Locked for player
-*/
-
-va_remote_lock = {
-  ARGVX3(0,_vehicle, objNull);
-  ARGVX3(1,_state,1);
-  //[[_vehicle, _state] , "A3W_fnc_lock", true, false, true] call BIS_fnc_MP;
-  [_vehicle, _state] call A3W_fnc_setLockState;
-};
-
-va_is_locked = {
-  ARGVX4(0,_vehicle,objNull,false);
-  def(_state);
-  _state = locked _vehicle;
-  (_state == 2 || { _state == 3})
-};
-
-
-va_lock_toggle = {
-  ARGVX3(0,_vehicle,objNull);
-
-  def(_locked);
-  def(_state);
-
-  _locked = [_vehicle] call va_is_locked;
-  _state = if (_locked) then {2} else {0};
-
-  [_vehicle, _state] call va_remote_lock;
-  _state
-};
-
-va_lock_action = {
-  ARGVX3(3,_this,[]);
-  ARGVX3(0,_player,objNull);
-  ARGVX3(1,_vehicle,objNull);
-
-  if ([_vehicle] call va_is_locked) exitWith {};
-
-
-  if (cfg_va_lock_sound_play) then {
-    playSound3d ["a3\sounds_f\air\Heli_Attack_02\Mixxx_door.wss",_player, true];
-  };
-
-  [_vehicle] call va_lock;
-};
-
-va_unlock_action = {
-  ARGVX3(3,_this,[]);
-  ARGVX3(0,_player,objNull);
-  ARGVX3(1,_vehicle,objNull);
-
-  if (not([_vehicle] call va_is_locked)) exitWith {};
-
-   if (cfg_va_lock_sound_play) then {
-    playSound3d ["a3\sounds_f\air\Heli_Attack_01\close.wss", _vehicle, insideAVehicle(_player)];
-  };
-
-  [_vehicle] call va_unlock;
-};
-
-va_is_lockable = {
-  ARGVX3(0,_vehicle,objNull);
-
-  if (_vehicle isKindOf "Man") exitWith {false};
-
-  def(_class);
-  _class = typeOf _vehicle;
-
-  ({_class isKindOf _x} count cfg_va_lock_actions_classes_list > 0 && {{_class isKindOf _x} count cfg_va_lock_actions_classes_list_excl == 0})
-};
-
-va_lock_action_available = {
-  if (not(cfg_va_lock_action_on)) exitWith {false};
-
-  ARGVX4(0,_player,objNull,false);
-  ARGVX4(1,_vehicle,objNull,false);
-
-  if ([_vehicle] call va_is_locked) exitWith {false};
-
-  if (not([_vehicle] call va_is_lockable)) exitWith {false};
-
-  if (cfg_va_lock_from_inside &&  {[_player, _vehicle] call va_player_inside}) exitWith {true};
-
-  if (cfg_va_lock_owner_only && {not([_player, _vehicle] call va_is_player_owner)}) exitWith {false};
-
-  true
-};
-
-va_unlock_action_available = {
-  if (not(cfg_va_lock_action_on)) exitWith {false};
-
-  ARGVX4(0,_player,objNull,false);
-  ARGVX4(1,_vehicle,objNull,false);
-
-  if (not([_vehicle] call va_is_locked)) exitWith {false};
-
-  if (not([_vehicle] call va_is_lockable)) exitWith {false};
-
-  if (cfg_va_lock_from_inside &&  {[_player, _vehicle] call va_player_inside}) exitWith {true};
-
-  if (cfg_va_lock_owner_only && {not([_player, _vehicle] call va_is_player_owner)}) exitWith {false};
-
-  true
-};
 
 
 va_outside_actions = OR(va_outside_actions,[]);
@@ -448,16 +324,6 @@ va_outside_add_actions = {
   _action_id = player addaction [format["<img image='addons\vactions\icons\info.paa'/> %1 info", _display_name], {_this call va_information_action;}, [_player, _vehicle],0,false,false,"",
   format["([objectFromNetId %1, objectFromNetId %2] call va_information_action_available)", str(netId _player), str(netId _vehicle)]];
   va_outside_actions = va_outside_actions + [_action_id];
-
-  //Add vehicle lock action
-  _action_id = player addaction [format["<img image='addons\vactions\icons\lock.paa'/> Lock %1", _display_name], {_this call va_lock_action;}, [_player, _vehicle],0,false,false,"",
-  format["([objectFromNetId %1, objectFromNetId %2] call va_lock_action_available)", str(netId _player), str(netId _vehicle)]];
-  va_outside_actions = va_outside_actions + [_action_id];
-
-  //Add vehicle unlock action
-  _action_id = player addaction [format["<img image='addons\vactions\icons\key.paa'/> Unlock %1", _display_name], {_this call va_unlock_action;}, [_player, _vehicle],999,true,false,"",
-  format["([objectFromNetId %1, objectFromNetId %2] call va_unlock_action_available)", str(netId _player), str(netId _vehicle)]];
-  va_outside_actions = va_outside_actions + [_action_id];
 };
 
 va_inside_actions = OR(va_inside_actions,[]);
@@ -472,16 +338,6 @@ va_inside_add_actions = {
 
   def(_display_name);
   _display_name = [typeOf _vehicle] call generic_display_name;
-
-  //Add vehicle lock action
-  _action_id = player addaction [format["<img image='addons\vactions\icons\lock.paa'/> Lock %1", _display_name], {_this call va_lock_action;}, [_player, _vehicle],10,false,false,"",
-  format["([objectFromNetId %1, objectFromNetId %2] call va_lock_action_available)", str(netId _player), str(netId _vehicle)]];
-  va_inside_actions = va_inside_actions + [_action_id];
-
-  //Add vehicle unlock action
-  _action_id = player addaction [format["<img image='addons\vactions\icons\key.paa'/> Unlock %1", _display_name], {_this call va_unlock_action;}, [_player, _vehicle],10,false,false,"",
-  format["([objectFromNetId %1, objectFromNetId %2] call va_unlock_action_available)", str(netId _player), str(netId _vehicle)]];
-  va_inside_actions = va_inside_actions + [_action_id];
 };
 
 

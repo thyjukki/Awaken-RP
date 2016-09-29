@@ -15,8 +15,6 @@
 	[["Damage", "NUMBER"], "_damage"],
 	[["Fuel", "NUMBER"], "_fuel"],
 	[["HitPoints", "ARRAY"], "_hitPoints"],
-	[["OwnerUID", "STRING"], "_owner"],
-	[["LockState", "NUMBER"], "_lockState"],
 	[["Variables", "ARRAY"], "_variables"],
 	[["Textures", "ARRAY"], "_textures"],
 	[["Weapons", "ARRAY"], "_weapons"],

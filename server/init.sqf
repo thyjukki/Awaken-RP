@@ -33,12 +33,6 @@ if (isServer) then
 
 		_veh = objectParent _unit;
 
-		// force unlock vehicle if not owned by player OR if somebody else is still inside
-		if (alive _veh && (_veh getVariable ["ownerUID","0"] != _uid || {{alive _x} count (crew _veh - [_unit]) > 0})) then
-		{
-			[_veh, 1] call A3W_fnc_setLockState; // Unlock
-		};
-
 		if (alive _unit) then
 		{
 			if (_unit call A3W_fnc_isUnconscious) then

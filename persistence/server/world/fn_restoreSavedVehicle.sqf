@@ -92,16 +92,6 @@ if (!isNil "_textures") then
 	_veh setVariable ["A3W_objectTextures", _objTextures, true];
 };
 
-if (!isNil "_owner") then
-{
-	_veh setVariable ["ownerUID", _owner, true];
-
-	if (!isNil "_lockState" && ["A3W_vehicleLocking"] call isConfigOn) then
-	{
-		[_veh, _lockState] call A3W_fnc_setLockState;
-	};
-};
-
 clearWeaponCargoGlobal _veh;
 clearMagazineCargoGlobal _veh;
 clearItemCargoGlobal _veh;

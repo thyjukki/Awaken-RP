@@ -166,8 +166,6 @@ _props =
 	["Fuel", _fuel],
 	["Damage", _damage],
 	["HitPoints", _hitPoints],
-	["OwnerUID", _owner],
-	["LockState", _locked],
 	["Variables", _variables],
 	["Textures", _textures],
 

@@ -16,8 +16,6 @@
 	["Damage", "_damage"],
 	["Fuel", "_fuel"],
 	["HitPoints", "_hitPoints"],
-	["OwnerUID", "_owner"],
-	["LockState", "_lockState"],
 	["Variables", "_variables"],
 	["Textures", "_textures"],
 	["Weapons", "_weapons"],

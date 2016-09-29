@@ -8,6 +8,5 @@ class ServerDir
 {
 	class generateKey {file = "server\functions\network\generateKey.sqf";};
 	class initPlayerServer {file = "initPlayerServer.sqf";};
-	class setLockState {file = "server\functions\fn_setLockState.sqf";};
 	class setupMissionObject {file = "server\functions\setupMissionObject.sqf";};
 };
