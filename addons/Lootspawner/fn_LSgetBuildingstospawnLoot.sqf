@@ -72,11 +72,11 @@ _begintime = diag_tickTime;
 								case 0:
 								{
 									_lootTypeList = [
-										[1, 30], //rifles
-										[2, 50], //pistols
+										[1, 50], //rifles
+										[2, 60], //pistols
 										[3, 100], //magazines
 										[4, 60], //items
-										[5, 60]  //backpacks
+										[5, 40]  //backpacks
 									];
 									_magsToGive = floor(random(5));
 								};
