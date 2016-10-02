@@ -127,7 +127,7 @@ if ((count (nearestObjects [_spwnPos, LSusedclass_list, 0.5])) == 0) then {
 
         //1 category loot only per place so -> exit For
         //no lootpiling
-        _lootholder setVariable ["Lootready", diag_tickTime];
+        //_lootholder setVariable ["Lootready", diag_tickTime];
     };
 
 };

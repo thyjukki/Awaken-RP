@@ -129,3 +129,9 @@ A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 
 { [_x] call fn_remotePlayerSetup } forEach allPlayers;
+
+
+[] spawn = {
+	private ["_sName"];
+	_sName = TFAR_fnc_getTeamSpeakServerName
+};

@@ -40,8 +40,8 @@ if (_uid call isAdmin) then
 				_marker = format ["ID:%1", _ID];
 				_marker = createMarkerLocal [_marker,position _x];
 				_marker setMarkerColorLocal "ColorBlue";
-				_marker setMarkerShape "ICON";
-				_marker setMarkerType "hd_dot";
+				_marker setMarkerShapeLocal "ICON";
+				_marker setMarkerTypeLocal "hd_dot";
 
 				_x setVariable ["A3W_VehicleTag_Marker", _marker, false];
 			};
