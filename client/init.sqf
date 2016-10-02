@@ -164,7 +164,7 @@ inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 			
 		};
 
-		hint format ["%1, %2, %3", _sName, _cName, _isEnabled];
+		//hint format ["%1, %2, %3", _sName, _cName, _isEnabled];
 
 		uiSleep 180;
 	};
