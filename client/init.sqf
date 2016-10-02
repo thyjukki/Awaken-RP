@@ -131,7 +131,41 @@ inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 { [_x] call fn_remotePlayerSetup } forEach allPlayers;
 
 
-[] spawn = {
-	private ["_sName"];
-	_sName = TFAR_fnc_getTeamSpeakServerName
+[] spawn {
+
+	while {true} do
+	{
+		private ["_sName", "_cName", "_isEnabled", "_name"];
+		_isEnabled = call TFAR_fnc_isTeamSpeakPluginEnabled;
+		_cName = call TFAR_fnc_getTeamSpeakChannelName;
+		_chanelname = ["A3W_TFRChanelName", "TaskForceRadio"] call getPublicVar;
+		_sName = call TFAR_fnc_getTeamSpeakServerName;
+		_servername = ["A3W_TFRServerName", "Awaken Roleplay"] call getPublicVar;
+
+		if (!_isEnabled) then
+		{
+			_result = ["You either do not have TFR teamspeak plugin or it's disabled! TFR is required for the server! Without it other players can not interact with you! Read more at www.awakenrp.com", "TFR DISABLED", true, true] call BIS_fnc_guiMessage; // Arma 3
+		}
+		else
+		{
+
+			if (_sName != _servername) then
+			{
+				_result = ["You are not in Awaken RP teamspeak! TFR is required for the server! Without it other players can not interact with you! Read more at www.awakenrp.com", "TFR WRONG SERVER", true, true] call BIS_fnc_guiMessage; // Arma 3
+			}
+			else
+			{
+
+				if (_cName != _chanelname) then
+				{
+					_result = ["You are not in TaskForceRadio channel! You must reconnect to the server! TFR is required for the server! Without it other players can not interact with you! Read more at www.awakenrp.com", "TFR WRONG CHANEL", true, true] call BIS_fnc_guiMessage; // Arma 3
+				}
+			};
+			
+		};
+
+		hint format ["%1, %2, %3", _sName, _cName, _isEnabled];
+
+		uiSleep 180;
+	};
 };
