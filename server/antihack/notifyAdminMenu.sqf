@@ -45,9 +45,9 @@ if (!isNil "_cfg" && {isClass _cfg}) then
 	_message = format ['[NOTICE] %1 used the admin menu to obtain a "%2"', profileName, _displayStr];
 };
 
-if (!isNil "_message" && {_message != ""}) then
+/*if (!isNil "_message" && {_message != ""}) then TODO (Disabled admin notifications for now)
 {
 	[[_message, getPlayerUID player, _flagChecksum, true], "A3W_fnc_chatBroadcast", true] call A3W_fnc_MP;
-};
+};*/
 
 [[profileName, getPlayerUID player, _action, _value, _flagChecksum], "A3W_fnc_adminMenuLog", false] call A3W_fnc_MP;
