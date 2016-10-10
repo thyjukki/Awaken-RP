@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=843;
+		nextID=844;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=64;
+		nextID=68;
 	};
 	class Camera
 	{
 		pos[]={4419.8994,441.22366,9291.1777};
-		dir[]={0.46440923,-0.21373895,-0.85948992};
-		up[]={0.101622,0.97688603,-0.18807413};
-		aside[]={-0.87982255,-6.1615719e-007,-0.47539401};
+		dir[]={0.083600707,-0.65847796,-0.74800169};
+		up[]={0.073140331,0.75259513,-0.6544109};
+		aside[]={-0.99385637,1.2430428e-007,-0.11107707};
 	};
 };
 binarizationWanted=0;
@@ -369,6 +369,7 @@ randomSeed=13949129;
 class ScenarioData
 {
 	author="Jukki";
+	respawn=3;
 	class Header
 	{
 		gameType="RPG";
@@ -392,6 +393,24 @@ class CustomAttributes
 						type[]=
 						{
 							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="Counter";
+							};
 						};
 					};
 				};
@@ -632,7 +651,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=781;
+		items=782;
 		class Item0
 		{
 			dataType="Layer";
@@ -107026,6 +107045,117 @@ class Mission
 					};
 				};
 				nAttributes=17;
+			};
+		};
+		class Item781
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={-6183.333,117.38023,2559.8359};
+				angles[]={6.2298303,0,0.026057767};
+			};
+			id=843;
+			type="ModuleCurator_F";
+			atlOffset=0.01499939;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="76561198009978959";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
 			};
 		};
 	};
