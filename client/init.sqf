@@ -140,7 +140,7 @@ inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 		_cName = call TFAR_fnc_getTeamSpeakChannelName;
 		_chanelname = ["A3W_TFRChanelName", "TaskForceRadio"] call getPublicVar;
 		_sName = call TFAR_fnc_getTeamSpeakServerName;
-		_servername = ["A3W_TFRServerName", "Awaken Roleplay"] call getPublicVar;
+		_servername = ["A3W_TFRServerName", "[ARP] Arma 3 DayZ Roleplaying [www.AwakenRP.com]"] call getPublicVar;
 
 		if (!_isEnabled) then
 		{
