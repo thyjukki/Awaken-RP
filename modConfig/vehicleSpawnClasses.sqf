@@ -27,18 +27,7 @@ civilianVehicles =
 	"CUP_C_Datsun_Covered",
 	"CUP_C_Datsun_Plain",
 	"CUP_C_Datsun_Tubeframe",
-	"CUP_C_Golf4_black_Civ",
-	"CUP_C_Golf4_blue_Civ",
-	"CUP_C_Golf4_camo_Civ",
-	"CUP_C_Golf4_camodigital_Civ",
-	"CUP_C_Golf4_camodark_Civ",
-	"CUP_C_Golf4_green_Civ",
-	"CUP_C_Golf4_kitty_Civ",
-	"CUP_C_Golf4_crowe_Civ",
 	"CUP_C_Golf4_red_Civ",
-	"CUP_C_Golf4_reptile_Civ",
-	"CUP_C_Golf4_whiteblood_Civ",
-	"CUP_C_Golf4_yellow_Civ",
 	"C_Hatchback_01_F",
 	"C_Hatchback_01_sport_F",
 	"C_Offroad_01_F",
@@ -46,7 +35,8 @@ civilianVehicles =
 	"CUP_C_Octavia_CIV",
 	"C_SUV_01_F",
 	"B_GEN_Offroad_01_gen_F",
-	["C_Van_01_box_F", "C_Van_01_transport_F"]
+	"C_Van_01_box_F",
+	"C_Van_01_transport_F"
 ];
 
 trucksVehicles =

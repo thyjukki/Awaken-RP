@@ -107,5 +107,5 @@ A3W_vehicleLoot = 0;               // Level of loot added to vehicles (0 = none,
 
 
 //TFR settings
-A3W_TFRServerName = "Awaken Roleplay"; // TFR Server name
+A3W_TFRServerName = "[ARP] Arma 3 DayZ Roleplaying [www.AwakenRP.com]"; // TFR Server name
 A3W_TFRChanelName = "TaskForceRadio";  // TFR Channel name
