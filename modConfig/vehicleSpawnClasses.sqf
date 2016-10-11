@@ -26,10 +26,8 @@ civilianVehicles =
 	"CUP_C_Datsun_Plain",
 	"CUP_C_Datsun_Tubeframe",
 	"CUP_C_Golf4_red_Civ",
-	"C_Offroad_01_F",
 	"C_Offroad_01_repair_F",
 	"CUP_C_Octavia_CIV",
-	"C_SUV_01_F",
 	"B_GEN_Offroad_01_gen_F",
 	"C_Van_01_box_F",
 	"C_Van_01_transport_F"
