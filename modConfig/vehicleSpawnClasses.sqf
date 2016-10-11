@@ -28,8 +28,6 @@ civilianVehicles =
 	"CUP_C_Datsun_Plain",
 	"CUP_C_Datsun_Tubeframe",
 	"CUP_C_Golf4_red_Civ",
-	"C_Hatchback_01_F",
-	"C_Hatchback_01_sport_F",
 	"C_Offroad_01_F",
 	"C_Offroad_01_repair_F",
 	"CUP_C_Octavia_CIV",
