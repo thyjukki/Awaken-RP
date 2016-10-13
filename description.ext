@@ -73,7 +73,7 @@ showGroupIndicator = 0;
 #include "addons\outlw_magrepack\config.hpp"
 #include "addons\gui\gui.hpp"
 #include "addons\CHVD\dialog.hpp"
-
+#include "infiSTAR_AdminMenu.hpp"
 
 #include "RepairParts.hpp" //names for all reapir parts. Needs moving to hitpoints
 
