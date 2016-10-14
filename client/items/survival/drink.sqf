@@ -36,7 +36,7 @@ _hasFailed = {
 
 _success = [2.5, ANIMATION, _hasFailed, []] call a3w_actions_start;
 if (_success) then {
-	thirstLevel = (thirstLevel + _amount) min 100;
+	thirstLevel = 100;
 	["Your thirst has eased", 5] call mf_notify_client;
 
 	player removeItem _item;
