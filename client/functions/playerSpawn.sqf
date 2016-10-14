@@ -86,24 +86,41 @@ if (isNil "playerData_alive") then
 			arsenalOpened = false;
 		}] call BIS_fnc_addScriptedEventHandler;
 
-		["Open",false] spawn BIS_fnc_arsenal;
+		[] spawn {
+
+			/* DISABLE LOADOUTS */
+
+			["Open",false] spawn BIS_fnc_arsenal;
+			waitUntil {!isNull (uinamespace getvariable ["bis_fnc_arsenal_display",displaynull])};
+			_display = (uinamespace getvariable ["bis_fnc_arsenal_display",displaynull]);
+
+			_ctrlButtonSave = _display displayctrl 44146;
+			_ctrlButtonSave ctrlEnable false;
+			_ctrlButtonSave ctrlShow false;
+
+			_ctrlButtonLoad = _display displayctrl 44147;
+			_ctrlButtonLoad ctrlEnable false;
+			_ctrlButtonLoad ctrlShow false;
+
+			_ctrlButtonExport = _display displayctrl 44148;
+			_ctrlButtonExport ctrlEnable false;
+			_ctrlButtonExport ctrlShow false;
+
+			_ctrlButtonImport = _display displayctrl 44149;
+			_ctrlButtonImport  ctrlEnable false;
+			_ctrlButtonImport  ctrlShow false;
+		};
+
 		player setCaptive true;
 		arsenalOpened = true;
 		waitUntil{ !arsenalOpened };
 
-		removeAllWeapons player; //TOOD(Jukki) verify this fixes the issue
-		removeAllItems player;
-		{player removeMagazine _x} forEach magazines player;
-
-
 		player setCaptive false;
+		
 		sleep 1;
-
 		_hour = date select 3;
 		_mins = date select 4;
-
 		[profileName, awaken_townName, format ["%1:%3%2", _hour, _mins, if (_mins < 10) then {"0"} else {""}]] spawn BIS_fnc_infoText;
-
 	};
 };
 

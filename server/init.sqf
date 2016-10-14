@@ -12,7 +12,7 @@
 
 if (!isServer && hasInterface) exitWith {};
 
-externalConfigFolder = "\AwakenRP_settings_test";
+externalConfigFolder = "\AwakenRP_settings";
 
 if (isServer) then
 {
@@ -67,8 +67,7 @@ if (isServer) then
 	}];
 
 	//Execute Server Side Scripts.
-	call compile preprocessFileLineNumbers "server\antihack\setup.sqf";
-	[] execVM "server\admins.sqf";
+	//[] execVM "server\admins.sqf";
 };
 
 [] execVM "server\functions\serverVars.sqf";
@@ -110,7 +109,6 @@ if (isServer) then
 		"A3W_bleedingTime",
 		"A3W_teamPlayersMap",
 		"A3W_disableGlobalVoice",
-		"A3W_antiHackMinRecoil",
 		"A3W_vehicleSaving",
 		"A3W_staticWeaponSaving",
 		"A3W_townSpawnCooldown",
