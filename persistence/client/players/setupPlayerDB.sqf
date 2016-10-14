@@ -43,7 +43,7 @@ fn_deletePlayerData =
 
 		if (_saveValid) then
 		{
-			if (_ghostingTimer > 0 && {!((getPlayerUID player) call isAdmin) || ["A3W_extDB_GhostingAdmins"] call isConfigOn}) then
+			if (_ghostingTimer > 0) then
 			{
 				["You have recently played on another server from the same hive.<br/><br/>" +
 				"In order to prevent ghosting, you will have to wait before being able to play here.<br/><br/>" +

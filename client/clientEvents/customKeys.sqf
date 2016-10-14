@@ -20,7 +20,6 @@ private ["_varName", "_defKeys", "_customKeys", "_isValid", "_voiceKeys"];
 }
 forEach
 [
-	["A3W_customKeys_adminMenu", [22]], // 22 = U
 	["A3W_customKeys_playerNames", [199,219,220]], // 199 = Home, 219 = LWin, 220 = RWin
 	["A3W_customKeys_earPlugs", [207]] // 207 = End
 ];
