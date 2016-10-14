@@ -21,7 +21,7 @@ scopeName "fn_deathMessage";
 if (isServer) then
 {
 	diag_log ["fn_deathMessage logs %1", _this];
-	[format ["insertKillLog:%1:%2:%3:%4:%5:%6", call A3W_extDB_ServerID, getPlayerUID _victim, name _victim, getPlayerUID _killer, name _killer, _cause]] call extDB_Database_async;
+	[format ["insertKillLog:%1:%2:%3:%4:%5:%6", call A3W_extDB_ServerID, "", _victim, "", _killer, _cause]] call extDB_Database_async;
 };
 
 if (_mode isEqualTo 0) then
