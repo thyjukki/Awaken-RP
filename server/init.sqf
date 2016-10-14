@@ -12,6 +12,7 @@
 
 if (!isServer && hasInterface) exitWith {};
 
+externalConfigFolder = "\AwakenRP_settings";
 
 if (isServer) then
 {
@@ -77,11 +78,15 @@ if (isServer) then
 
 	[] execVM "server\functions\broadcaster.sqf";
 	[] execVM "server\functions\relations.sqf";
+	[] execVM (externalConfigFolder + "\init.sqf");
 
 	waitUntil {scriptDone _serverCompileHandle};
 
 	// Broadcast server rules
-	[[], "client\functions\defineServerRules.sqf"] remoteExecCall ["execVM", [-2,0] select hasInterface, true];
+	if (loadFile (externalConfigFolder + "\serverRules.sqf") != "") then
+	{
+		[[call compile preprocessFileLineNumbers (externalConfigFolder + "\serverRules.sqf")], "client\functions\defineServerRules.sqf"] remoteExecCall ["execVM", [-2,0] select hasInterface, true];
+	};
 };
 
 diag_log "WASTELAND SERVER - Server Compile Finished";

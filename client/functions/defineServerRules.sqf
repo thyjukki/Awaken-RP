@@ -12,20 +12,5 @@ if !(player diarySubjectExists "rules") then
 {
 	waitUntil {player diarySubjectExists "credits"};
 	player createDiarySubject ["rules", "Server Rules"];
-	player createDiaryRecord ["rules", ["Rules",
-"
-
-<br/>
-<font face='PuristaBold' size='22'>AwakenRP Rules in short, visit www.awakenrp.com for full rules</font> <br/>
-<br/>
-<font face='PuristaBold'>1.</font> You must roleplay! <br/>
-<font face='PuristaBold'>2.</font> No Killing on Sight! <br/>
-<font face='PuristaBold'>4.</font> Respect other players. <br/>
-<font face='PuristaBold'>5.</font> Respect the administrators. <br/>
-<font face='PuristaBold'>5.</font> Remember new life rule! <br/>
-<font face='PuristaBold'>5.</font> Do not metagame! <br/>
-
-"
-
-]];
+	player createDiaryRecord ["rules", ["Rules", _this select 0]];
 };

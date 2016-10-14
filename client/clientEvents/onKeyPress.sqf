@@ -20,6 +20,11 @@ _handled = false;
 // keycodes are defined in client\clientEvents\customKeys.sqf
 switch (true) do
 {
+	// U key
+	case (_key in A3W_customKeys_adminMenu):
+	{
+		execVM "client\systems\adminPanel\checkAdmin.sqf";
+	};
 
 	// Earplugs - End Key
 	case (_key in A3W_customKeys_earPlugs):
@@ -84,6 +89,13 @@ if (!_handled && _key in actionKeys "GetOut") then
 			};
 		};
 	};
+};
+
+
+// Push-to-talk
+if (!_handled && _key in call A3W_allVoiceChatKeys) then
+{
+	[true] call fn_voiceChatControl;
 };
 
 // Override prone reload freeze (ffs BIS)
