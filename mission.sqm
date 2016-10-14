@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=76;
+		nextID=80;
 	};
 	class Camera
 	{
@@ -113283,7 +113283,7 @@ class Mission
 			};
 			id=1873;
 			type="US_WarfareBBarrier10xTall_EP1";
-			atlOffset=0.0090637207;
+			atlOffset=0.0090332031;
 		};
 		class Item1139
 		{
@@ -113433,7 +113433,7 @@ class Mission
 			};
 			id=1882;
 			type="Land_House_K_1_EP1";
-			atlOffset=0.63165283;
+			atlOffset=0.63162231;
 		};
 		class Item1148
 		{
@@ -113465,7 +113465,7 @@ class Mission
 			};
 			id=1884;
 			type="Land_House_L_8_dam_EP1";
-			atlOffset=0.35009766;
+			atlOffset=0.35018921;
 		};
 		class Item1150
 		{
@@ -113959,7 +113959,7 @@ class Mission
 			};
 			id=1913;
 			type="Land_BagFence_Long_F";
-			atlOffset=-0.017578125;
+			atlOffset=-0.017425537;
 		};
 		class Item1179
 		{

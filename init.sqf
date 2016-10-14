@@ -55,7 +55,8 @@ if (!isDedicated) then
 	{
 		if (hasInterface) then // Normal player
 		{
-			9999 cutText ["Welcome to AwakenRP, please wait for your RP to start", "BLACK", 0.01];
+			//9999 cutText ["Welcome to AwakenRP, please wait for your RP to start", "BLACK", 0.01];
+			9999 cutRsc ["ARP_LoadScreen","BLACK OUT",3];
 
 			waitUntil {!isNull player};
 			player setVariable ["playerSpawning", true, true];
@@ -87,11 +88,6 @@ if (isServer) then
 	diag_log format ["############################# %1 #############################", missionName];
 	diag_log "AwakenRP - Initializing Server";
 	[] execVM "server\init.sqf";
-
-	if (isDedicated) then
-	{
-		call compile preprocessFileLineNumbers '\marmadebug\init\fn_init.sqf';
-	};
 };
 
 if (hasInterface || isServer) then

@@ -32,6 +32,39 @@ class RscPictureGUI
 	w = 0.2;
 	h = 0.15;
 };
+
+class ARP_DeathScreen {
+	idd = -1;
+	movingEnable = "false";
+	duration = 120;
+	fadein = 0;
+	name = "DeathScreen";
+	controls[] = {"DeathScreen"};
+	class DeathScreen: RscPicture {
+		x = 0 * safezoneW + safezoneX;
+		y = 0 * safezoneH + safezoneY;
+		w = 1 * safezoneW;
+		h = 1 * safezoneH;
+		text = "\z\addons\dayz_code\gui\deathscreen.paa";
+	};
+};
+
+class ARP_LoadScreen {
+	idd = -1;
+	movingEnable = "false";
+	duration = 120;
+	fadein = 0;
+	name = "LoadingScreen";
+	controls[] = {"LoadingScreen"};
+	class LoadingScreen: RscPicture {
+		x = 0 * safezoneW + safezoneX;
+		y = 0 * safezoneH + safezoneY;
+		w = 1 * safezoneW;
+		h = 1 * safezoneH;
+		text = "mapConfig\loadingscreen.jpg";
+	};
+};
+
 class WastelandHud {
 	idd = -1;
 	fadeout=0;
