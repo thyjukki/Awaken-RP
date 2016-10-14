@@ -64,6 +64,9 @@ if (isServer) then
 
 		false
 	}];
+
+	//Execute Server Side Scripts.
+	//[] execVM "server\admins.sqf";
 };
 
 [] execVM "server\functions\serverVars.sqf";
