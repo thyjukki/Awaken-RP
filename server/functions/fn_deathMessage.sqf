@@ -22,6 +22,12 @@ if (isServer) then
 {
 	diag_log ["fn_deathMessage logs %1", _this];
 	[format ["insertKillLog:%1:%2:%3:%4:%5:%6", call A3W_extDB_ServerID, "", _victim, "", _killer, _cause]] call extDB_Database_async;
+	
+	{
+		if(getPlayerUID _x in ['76561198005464250','76561198169834895','76561198025213815']) then {
+			[format["%1 was killed by %2",_victim,_killer]] remoteExec ["systemChat",_x];
+		};
+	} forEach allPlayers;
 };
 
 if (_mode isEqualTo 0) then
