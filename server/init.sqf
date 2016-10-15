@@ -14,6 +14,80 @@ if (!isServer && hasInterface) exitWith {};
 
 externalConfigFolder = "\AwakenRP_settings";
 
+if (isServer) then {
+	[] spawn {
+		runZombieSpawner = true;
+	    _zombieClasses = ["RyanZombieC_man_polo_2_Fslow", "RyanZombieC_man_polo_4_Fslow", "RyanZombieC_man_polo_5_Fslow", "RyanZombieC_man_polo_6_Fslow", "RyanZombieC_man_p_fugitive_Fslow", "RyanZombieC_man_w_worker_Fslow", "RyanZombieC_scientist_Fslow", "RyanZombieC_man_hunter_1_Fslow", "RyanZombieC_man_pilot_Fslow", "RyanZombieC_journalist_Fslow", "RyanZombieB_Soldier_02_fslow", "RyanZombieB_Soldier_02_f_1slow", "RyanZombieB_Soldier_02_f_1_1slow", "RyanZombieB_Soldier_03_fslow", "RyanZombieB_Soldier_03_f_1slow", "RyanZombieB_Soldier_03_f_1_1slow", "RyanZombieB_Soldier_04_fslow", "RyanZombieB_Soldier_04_f_1slow", "RyanZombieB_Soldier_04_f_1_1slow", "RyanZombieB_Soldier_lite_Fslow", "RyanZombieB_Soldier_lite_F_1slow"];
+		_spawnMarker = "zombie_spawn_";
+		_spawnCount = 76;
+		zombie_markers = [];
+		zombie_count = 0;
+		zombie_group = createGroup opfor;
+
+		for "_i" from 1 to _spawnCount do {
+			_marker = format["%1%2",_spawnMarker,_i];
+			zombie_markers pushBack [_marker,[]];
+		};
+
+		while {runZombieSpawner} do {
+			{
+				if(isNull zombie_group) then {
+					zombie_group = createGroup opfor;
+				};
+				
+				_marker = _x select 0;
+				_zombies = _x select 1;
+				_nearbyPlayerCount = 0;
+				{
+					if(isPlayer _x) then {
+						_nearbyPlayerCount = _nearbyPlayerCount + 1;
+					};
+				}forEach nearestObjects [(getMarkerPos _marker), ["Man"], 500];
+
+				{
+					if (!alive _x) then {
+						_zombies deleteAt _forEachIndex;
+						deleteVehicle _x;
+						zombie_count = zombie_count - 1;
+					}
+				} forEach _zombies;
+
+				_nearbyZombieCount = count nearestObjects [(getMarkerPos _marker),_zombieClasses,750];
+
+				if(_nearbyPlayerCount >= 1) then {
+					_neededZombies = _nearbyPlayerCount * 5;
+					if(_neededZombies >= 20) then {
+						_neededZombies == 20;
+					};
+
+					if (_nearbyZombieCount < _neededZombies) then {
+						_toSpawn = _neededZombies - _nearbyZombieCount;
+						for "_i" from 1 to _toSpawn do {
+							if (((count allPlayers) * 5) > zombie_count) then {
+								_zombieToSpawn = _zombieClasses call BIS_fnc_selectRandom;
+								_zombieToSpawn = format["%1%2",_zombieToSpawn,"Opfor"];
+								_pos = [(getMarkerPos _marker),10,200,5,0,500,0] call BIS_fnc_findSafePos;
+								_newZombie = zombie_group createUnit [_zombieToSpawn,_pos,[],0,"CAN_COLLIDE"];
+								_zombies pushBack _newZombie;
+								zombie_count = zombie_count + 1;
+							};
+						};
+					};
+				} else {
+					{
+						deleteVehicle _x;
+						zombie_count = zombie_count - 1;
+					}foreach _zombies;
+					_zombies = [];
+				};
+
+				zombie_markers set [_forEachIndex, [_marker,_zombies]];
+				uiSleep 1;
+			}forEach zombie_markers;
+		};
+	};
+};
+
 if (isServer) then
 {
 	vChecksum = compileFinal str call A3W_fnc_generateKey;
