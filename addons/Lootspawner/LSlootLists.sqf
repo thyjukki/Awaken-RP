@@ -1352,7 +1352,7 @@ lootMagazine_list =
 //                              itemlist    : list of item class names
 lootItem_list =
 [
-	[ // CIVIL
+	[ 
 		0,
 		[
 			["V_Rangemaster_belt", 100.0],
@@ -1386,7 +1386,7 @@ lootItem_list =
 			["rb_WoodPile", 30.0]
 		]
 	],
-	[ // MILITARY Low
+	[
 		1,
 		[
 			["V_Rangemaster_belt", 100.0],
@@ -1451,7 +1451,7 @@ lootItem_list =
 			["rb_matches", 60.0]
 		]
 	],
-	[ // MILITARY High (White barracks, vanilla A2 barracks, ATC)
+	[
 		2,
 		[
 			["V_Rangemaster_belt", 100.0],
@@ -1517,7 +1517,7 @@ lootItem_list =
 			["rb_matches", 60.0]
 		]
 	],
-	[ // INDUSTRIAL
+	[
 		3,
 		[
 			["V_Rangemaster_belt", 30.0],
@@ -1538,7 +1538,7 @@ lootItem_list =
 			["rb_Fuelcan", 50.0]
 		]
 	],
-	[ // RESEARCH
+	[ 
 		4,
 		[
 			["V_Rangemaster_belt", 20.0],
@@ -1550,7 +1550,7 @@ lootItem_list =
 			["rb_matches", 20.0]
 		]
 	],
-	[ // MILITARY SPECIAL (BLACK TWO STORY BARRACKS ONLY!)
+	[ 
 		5,
 		[
 			["V_Chestrig_khk", 100.0],
@@ -1596,7 +1596,7 @@ lootItem_list =
 			["rb_matches", 20.0]
 		]
 	],
-	[ // Hunting (Deerstands and barns)
+	[ 
 		6,
 		[
 			["V_Rangemaster_belt", 100.0],
@@ -1632,10 +1632,10 @@ lootItem_list =
 			["rb_WoodPile", 100.0]
 		]
 	],
-	[ // Crashsite US
+	[ 
 		7,
 		[
-			["V_Chestrig_khk", 50.0], //vests
+			["V_Chestrig_khk", 50.0], 
 			["V_Chestrig_rgr", 50.0],
 			["V_Chestrig_blk", 50.0],
 			["V_Chestrig_oli", 50.0],
@@ -1651,9 +1651,9 @@ lootItem_list =
 			["V_PlateCarrierIA1_dgtl", 5.0],
 			["V_PlateCarrierIA2_dgtl", 5.0],
 			["V_PlateCarrierL_CTRG", 5.0],
-			["U_B_GhillieSuit", 1.0,],
+			["U_B_GhillieSuit", 1.0],
 			["U_I_FullGhillie_lsh", 1.0],
-			["FHQ_optic_ACOG", 50.0],  //scopes
+			["FHQ_optic_ACOG", 50.0],  
 			["FHQ_optic_ACOG_tan", 50.0],
 			["FHQ_optic_AIM", 100.0],
 			["FHQ_optic_AIM_tan", 100.0],
@@ -1688,13 +1688,13 @@ lootItem_list =
 			["CUP_optic_Elcan_reflex", 30.0],
 			["CUP_optic_TrijiconRx01_black", 30.0],
 			["CUP_optic_ELCAN_SpecterDR", 30.0],
-			["hlc_muzzle_Tundra", 50.0],  //supp
+			["hlc_muzzle_Tundra", 50.0],
 			["hlc_muzzle_snds_AUG", 50.0],
 			["hlc_muzzle_snds_fal", 20.0],
-			["muzzle_snds_L", 50.0], //9mm
-			["muzzle_snds_M", 20.0], //556
-			["muzzle_snds_B", 5.0], //762
-			["muzzle_snds_acp", 50.0], //45
+			["muzzle_snds_L", 50.0], 
+			["muzzle_snds_M", 20.0],
+			["muzzle_snds_B", 5.0],
+			["muzzle_snds_acp", 50.0], 
 			["CUP_muzzle_snds_M9", 50.0],
 			["CUP_muzzle_snds_MicroUzi", 50.0],
 			["CUP_muzzle_snds_L85", 20.0],
@@ -1711,7 +1711,7 @@ lootItem_list =
 			["R3F_SILENCIEUX_FAMAS", 20.0],
 			["R3F_SILENCIEUX_HK416", 20.0],
 			["R3F_SILENCIEUX_HK417", 10.0],
-			["CUP_Mxx_camo", 30.0], // misc (ghillie wrap)
+			["CUP_Mxx_camo", 30.0], 
 			["CUP_Mxx_camo_half", 30.0],
 			["acc_flashlight", 80.0],
 			["bipod_01_F_blk",	80.0],
@@ -1724,10 +1724,10 @@ lootItem_list =
 			["acc_pointer_IR", 80.0]
 		]
 	],
-	[ // Crashsite RUS
+	[ 
 		8,
 		[
-			["V_Chestrig_khk", 50.0],  //vests
+			["V_Chestrig_khk", 50.0],
 			["V_Chestrig_rgr", 50.0],
 			["V_Chestrig_blk", 50.0],
 			["V_Chestrig_oli", 50.0],
@@ -1743,9 +1743,9 @@ lootItem_list =
 			["V_PlateCarrierIA1_dgtl", 5.0],
 			["V_PlateCarrierIA2_dgtl", 5.0],
 			["V_PlateCarrierL_CTRG", 5.0],
-			["U_B_GhillieSuit", 1.0,],
+			["U_B_GhillieSuit", 1.0],
 			["U_I_FullGhillie_lsh", 1.0],
-			["FHQ_optic_ACOG", 50.0],  //scopes
+			["FHQ_optic_ACOG", 50.0],  
 			["FHQ_optic_ACOG_tan", 50.0],
 			["FHQ_optic_AIM", 100.0],
 			["FHQ_optic_AIM_tan", 100.0],
@@ -1781,16 +1781,16 @@ lootItem_list =
 			["hlc_optic_kobra", 100.0],
 			["HLC_Optic_ZFSG1", 50.0],
 			["hlc_optic_accupoint_g3", 50.0],
-			["hlc_muzzle_Tundra", 20.0],  //supp
-			["muzzle_snds_L", 50.0], //9mm
-			["muzzle_snds_M", 20.0], //556
-			["muzzle_snds_B", 5.0], //762
-			["muzzle_snds_acp", 50.0], //45
+			["hlc_muzzle_Tundra", 20.0],  
+			["muzzle_snds_L", 50.0], 
+			["muzzle_snds_M", 20.0], 
+			["muzzle_snds_B", 5.0], 
+			["muzzle_snds_acp", 50.0], 
 			["CUP_muzzle_snds_MicroUzi", 30.0],
 			["hlc_muzzle_545SUP_AK", 70.0],
 			["hlc_muzzle_762SUP_AK", 70.0],
 			["CUP_muzzle_Bizon", 40.0],
-			["CUP_SVD_camo_g", 50.0], //misc
+			["CUP_SVD_camo_g", 50.0],
 			["CUP_SVD_camo_g_half", 50.0],
 			["acc_flashlight", 100.0],
 			["bipod_01_F_blk",	80.0],
@@ -1803,10 +1803,10 @@ lootItem_list =
 			["acc_pointer_IR", 100.0]
 		]
 	],
-	[ // Hotel (ghost hotel, all varients)
+	[ 
 		9,
 		[
-			["V_Rangemaster_belt", 100.0],  //vests
+			["V_Rangemaster_belt", 100.0], 
 			["V_BandollierB_khk", 100.0],
 			["V_BandollierB_cbr", 100.0],
 			["V_BandollierB_rgr", 100.0],
@@ -1834,7 +1834,7 @@ lootItem_list =
 			["U_LIB_US_Corp", 2.0],
 			["V_LIB_US_Vest_Garand", 2.0],
 			["V_LIB_US_Vest_Thompson", 2.0],
-			["muzzle_snds_L", 10.0], //supp
+			["muzzle_snds_L", 10.0],
 			["muzzle_snds_acp", 10.0],
 			["CUP_muzzle_snds_MicroUzi", 10.0],
 			["hlc_muzzle_545SUP_AK", 30.0],
@@ -1842,7 +1842,7 @@ lootItem_list =
 			["CUP_muzzle_Bizon", 40.0],
 			["hlc_muzzle_Tundra", 50.0],
 			["hlc_muzzle_Agendasix10mm", 30.0],
-			["HLC_Optic_PSO1", 30.0], //optics
+			["HLC_Optic_PSO1", 30.0], 
 			["HLC_Optic_1p29", 30.0],
 			["hlc_optic_kobra", 100.0],
 			["FHQ_optic_AIM", 100.0],
@@ -1857,7 +1857,7 @@ lootItem_list =
 			["optic_Hamr", 5.0],
 			["optic_Arco", 5.0],
 			["CUP_optic_ELCAN_SpecterDR", 3.0],
-			["acc_flashlight", 70.0],  // misc
+			["acc_flashlight", 70.0],
 			["acc_pointer_IR", 70.0],
 			["bipod_01_F_blk",	60.0],
 			["ItemWatch", 60.0],
@@ -1868,7 +1868,7 @@ lootItem_list =
 			["ItemMap", 60.0]
 		]
 	],
-	[ // Castle
+	[
 		10,
 		[
 			["V_Rangemaster_belt", 60.0],
@@ -1897,7 +1897,7 @@ lootItem_list =
 			["rb_matches", 60.0]
 		]
 	],
-	[ // Marketplace/Office
+	[
 		11,
 		[
 			["V_Rangemaster_belt", 60.0],
